@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>신흥레저타운 관리자 페이지</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.tailwindcss.com/3.4.16" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <script>tailwind.config={theme:{extend:{colors:{primary:'#0088cc',secondary:'#f8b400'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+  <style>
+    .custom-checkbox:checked {
+      accent-color: #0088cc; /* primary color */
+    }
+  </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+  <div class="max-w-2xl mx-auto py-10">
+    <h1 class="text-3xl font-bold mb-8 text-center">관리자 페이지</h1>
+    
+    <!-- 메인 이미지 변경 -->
+    <div class="mb-8 p-6 bg-white rounded-lg shadow-md">
+      <label class="block font-bold mb-2">메인 이미지 URL</label>
+      <input id="mainImage" type="text" class="w-full border px-3 py-2 rounded focus:outline-none focus:ring-2 focus:ring-primary/50" placeholder="메인 이미지 URL 입력">
+      <button onclick="saveMainImage()" class="mt-2 bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded">저장</button>
+    </div>
+    
+    <!-- 카바나 이미지 변경 -->
+    <div class="mb-8 p-6 bg-white rounded-lg shadow-md">
+      <label class="block font-bold mb-2">카바나 이미지 URL</label>
+      <input id="cabanaImage" type="text" class="w-full border px-3 py-2 rounded focus:outline-none focus:ring-2 focus:ring-primary/50" placeholder="카바나 이미지 URL 입력">
+      <button onclick="saveCabanaImage()" class="mt-2 bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded">저장</button>
+    </div>
+    
+    <!-- SEO 데이터 입력 -->
+    <div class="mb-8 p-6 bg-white rounded-lg shadow-md">
+      <label class="block font-bold mb-2">SEO 메타데이터</label>
+      <textarea id="seoData" class="w-full border px-3 py-2 rounded focus:outline-none focus:ring-2 focus:ring-primary/50" rows="4" placeholder="메타태그 HTML 입력"></textarea>
+      <button onclick="saveSEO()" class="mt-2 bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded">저장</button>
+    </div>
+    
+    <!-- 예약하기 버튼 링크 -->
+    <div class="mb-8 p-6 bg-white rounded-lg shadow-md">
+      <label class="block font-bold mb-2">예약하기 버튼 링크</label>
+      <input id="bookingLink" type="text" class="w-full border px-3 py-2 rounded focus:outline-none focus:ring-2 focus:ring-primary/50" placeholder="예약하기 링크 입력">
+      <button onclick="saveBookingLink()" class="mt-2 bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded">저장</button>
+    </div>
+    
+    <!-- 카카오톡 링크 -->
+    <div class="mb-8 p-6 bg-white rounded-lg shadow-md">
+      <label class="block font-bold mb-2">카카오톡 채널 링크</label>
+      <input id="kakaoLink" type="text" class="w-full border px-3 py-2 rounded focus:outline-none focus:ring-2 focus:ring-primary/50" placeholder="카카오톡 채널 링크 입력">
+      <button onclick="saveKakaoLink()" class="mt-2 bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded">저장</button>
+    </div>
+    
+    <!-- 팝업 관리 -->
+    <div class="mb-8 p-6 bg-white rounded-lg shadow-md">
+      <h2 class="text-2xl font-bold mb-6">팝업 관리</h2>
+      <form id="popupForm" class="space-y-4">
+        <div>
+          <label for="popupTitle" class="block font-bold mb-2">팝업 제목</label>
+          <input type="text" id="popupTitle" class="w-full border px-3 py-2 rounded focus:outline-none focus:ring-2 focus:ring-primary/50" placeholder="팝업 제목 입력" required>
+        </div>
+        <div>
+          <label for="popupContent" class="block font-bold mb-2">팝업 내용</label>
+          <textarea id="popupContent" class="w-full border px-3 py-2 rounded focus:outline-none focus:ring-2 focus:ring-primary/50" rows="3" placeholder="팝업 내용 입력" required></textarea>
+        </div>
+        <div>
+          <label for="popupImage" class="block font-bold mb-2">팝업 이미지 URL</label>
+          <input type="url" id="popupImage" class="w-full border px-3 py-2 rounded focus:outline-none focus:ring-2 focus:ring-primary/50" placeholder="이미지 URL 입력 (선택 사항)">
+        </div>
+        <div>
+          <label for="popupLink" class="block font-bold mb-2">팝업 이미지 링크</label>
+          <input type="url" id="popupLink" class="w-full border px-3 py-2 rounded focus:outline-none focus:ring-2 focus:ring-primary/50" placeholder="이미지 클릭 시 이동할 링크 (선택 사항)">
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label for="popupStartDate" class="block font-bold mb-2">게시 시작일</label>
+            <input type="text" id="popupStartDate" class="w-full border px-3 py-2 rounded flatpickr-input focus:outline-none focus:ring-2 focus:ring-primary/50" placeholder="날짜 선택" required>
+          </div>
+          <div>
+            <label for="popupEndDate" class="block font-bold mb-2">게시 종료일</label>
+            <input type="text" id="popupEndDate" class="w-full border px-3 py-2 rounded flatpickr-input focus:outline-none focus:ring-2 focus:ring-primary/50" placeholder="날짜 선택" required>
+          </div>
+        </div>
+        <div class="flex items-center space-x-2">
+          <input type="checkbox" id="popupActive" class="form-checkbox h-5 w-5 text-primary rounded custom-checkbox">
+          <label for="popupActive" class="text-gray-700">팝업 활성화</label>
+        </div>
+        <div class="flex space-x-2">
+          <button type="submit" class="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded" id="savePopupButton">팝업 추가/수정</button>
+          <button type="button" class="bg-gray-400 hover:bg-gray-500 text-white px-4 py-2 rounded" id="resetPopupButton">초기화</button>
+        </div>
+      </form>
+
+      <h3 class="text-xl font-bold mt-8 mb-4">현재 팝업 목록</h3>
+      <div class="overflow-x-auto">
+        <table class="min-w-full bg-white border border-gray-200 rounded-lg">
+          <thead>
+            <tr class="bg-gray-100">
+              <th class="py-2 px-4 border-b text-sm font-semibold text-gray-700 uppercase tracking-wider text-left">제목</th>
+              <th class="py-2 px-4 border-b text-sm font-semibold text-gray-700 uppercase tracking-wider text-left">게시 기간</th>
+              <th class="py-2 px-4 border-b text-sm font-semibold text-gray-700 uppercase tracking-wider text-center">활성화</th>
+              <th class="py-2 px-4 border-b text-sm font-semibold text-gray-700 uppercase tracking-wider text-center">작업</th>
+            </tr>
+          </thead>
+          <tbody id="popupList">
+            <!-- Popups will be loaded here by JavaScript -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script>
+    // 예시: 로컬스토리지에 저장 (실제 운영은 백엔드 연동 필요)
+    function saveMainImage() {
+      localStorage.setItem('mainImage', document.getElementById('mainImage').value);
+      alert('저장되었습니다.');
+    }
+    function saveCabanaImage() {
+      localStorage.setItem('cabanaImage', document.getElementById('cabanaImage').value);
+      alert('저장되었습니다.');
+    }
+    function saveSEO() {
+      localStorage.setItem('seoData', document.getElementById('seoData').value);
+      alert('저장되었습니다.');
+    }
+    function saveBookingLink() {
+      localStorage.setItem('bookingLink', document.getElementById('bookingLink').value);
+      alert('저장되었습니다.');
+    }
+    function saveKakaoLink() {
+      localStorage.setItem('kakaoLink', document.getElementById('kakaoLink').value);
+      alert('저장되었습니다.');
+    }
+
+    let editingPopupId = null; // Currently editing popup ID
+
+    // Initialize Flatpickr for date inputs
+    flatpickr("#popupStartDate", {
+      dateFormat: "Y-m-d",
+      allowInput: true,
+    });
+    flatpickr("#popupEndDate", {
+      dateFormat: "Y-m-d",
+      allowInput: true,
+    });
+
+    // Function to load popups from localStorage
+    function loadPopups() {
+      const popups = JSON.parse(localStorage.getItem('popups')) || [];
+      const popupList = document.getElementById('popupList');
+      popupList.innerHTML = ''; // Clear existing list
+
+      popups.forEach(popup => {
+        const row = document.createElement('tr');
+        row.className = 'border-t';
+        row.innerHTML = `
+          <td class="py-3 px-4 border-b whitespace-nowrap">${popup.title}</td>
+          <td class="py-3 px-4 border-b whitespace-nowrap">${popup.startDate} ~ ${popup.endDate}</td>
+          <td class="py-3 px-4 border-b text-center whitespace-nowrap">
+            <input type="checkbox" ${popup.active ? 'checked' : ''} disabled class="form-checkbox h-4 w-4 text-primary rounded custom-checkbox">
+          </td>
+          <td class="py-3 px-4 border-b text-center whitespace-nowrap">
+            <button onclick="editPopup('${popup.id}')" class="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded text-sm mr-2">수정</button>
+            <button onclick="deletePopup('${popup.id}')" class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded text-sm">삭제</button>
+          </td>
+        `;
+        popupList.appendChild(row);
+      });
+    }
+
+    // Function to save/update a popup
+    document.getElementById('popupForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const title = document.getElementById('popupTitle').value;
+      const content = document.getElementById('popupContent').value;
+      const image = document.getElementById('popupImage').value;
+      const link = document.getElementById('popupLink').value;
+      const startDate = document.getElementById('popupStartDate').value;
+      const endDate = document.getElementById('popupEndDate').value;
+      const active = document.getElementById('popupActive').checked;
+
+      let popups = JSON.parse(localStorage.getItem('popups')) || [];
+
+      if (editingPopupId) {
+        // Update existing popup
+        popups = popups.map(popup => 
+          popup.id === editingPopupId ? { id: editingPopupId, title, content, image, link, startDate, endDate, active } : popup
+        );
+        editingPopupId = null; // Reset editing state
+        alert('팝업이 수정되었습니다.');
+      } else {
+        // Add new popup
+        const newPopup = { 
+          id: Date.now().toString(), // Simple unique ID
+          title, 
+          content, 
+          image, 
+          link, 
+          startDate, 
+          endDate, 
+          active 
+        };
+        popups.push(newPopup);
+        alert('새 팝업이 추가되었습니다.');
+      }
+
+      localStorage.setItem('popups', JSON.stringify(popups));
+      loadPopups(); // Reload list
+      resetForm(); // Clear form
+    });
+
+    // Function to edit a popup
+    function editPopup(id) {
+      const popups = JSON.parse(localStorage.getItem('popups')) || [];
+      const popupToEdit = popups.find(popup => popup.id === id);
+
+      if (popupToEdit) {
+        document.getElementById('popupTitle').value = popupToEdit.title;
+        document.getElementById('popupContent').value = popupToEdit.content;
+        document.getElementById('popupImage').value = popupToEdit.image;
+        document.getElementById('popupLink').value = popupToEdit.link;
+        document.getElementById('popupStartDate').value = popupToEdit.startDate;
+        document.getElementById('popupEndDate').value = popupToEdit.endDate;
+        document.getElementById('popupActive').checked = popupToEdit.active;
+        editingPopupId = id;
+      }
+    }
+
+    // Function to delete a popup
+    function deletePopup(id) {
+      if (confirm('정말 이 팝업을 삭제하시겠습니까?')) {
+        let popups = JSON.parse(localStorage.getItem('popups')) || [];
+        popups = popups.filter(popup => popup.id !== id);
+        localStorage.setItem('popups', JSON.stringify(popups));
+        loadPopups();
+        resetForm(); // Clear form if the deleted popup was being edited
+        alert('팝업이 삭제되었습니다.');
+      }
+    }
+
+    // Function to reset the form
+    function resetForm() {
+      document.getElementById('popupForm').reset();
+      editingPopupId = null;
+      document.getElementById('savePopupButton').textContent = '팝업 추가/수정';
+    }
+
+    // Event listener for reset button
+    document.getElementById('resetPopupButton').addEventListener('click', resetForm);
+
+    // Initial load of popups when the page loads
+    document.addEventListener('DOMContentLoaded', loadPopups);
+  </script>
+</body>
+</html>
