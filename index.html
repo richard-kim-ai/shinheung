@@ -3,7 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO 기본 메타데이터 -->
     <title>신흥레저타운 - 자연 속에서 즐기는 사계절 레저</title>
+    <meta name="description" content="경기도 양주시 신흥레저타운, 사계절 수영장, 카바나, 불멍장, 가족과 함께하는 자연 속 레저, 온라인 예매 할인, 편리한 예약, 다양한 부대시설 안내">
+    <meta name="keywords" content="신흥레저타운, 양주시, 수영장, 카바나, 불멍장, 워터파크, 가족여행, 캠핑, 예약, 할인, 경기도, 피크닉, 야외수영장">
+    <meta name="author" content="신흥레저타운">
+
+    <!-- Open Graph (SNS 공유 최적화) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="신흥레저타운 - 자연 속에서 즐기는 사계절 레저">
+    <meta property="og:description" content="경기도 양주시 신흥레저타운, 사계절 수영장, 카바나, 불멍장, 가족과 함께하는 자연 속 레저, 온라인 예매 할인, 편리한 예약, 다양한 부대시설 안내">
+    <meta property="og:image" content="https://yourdomain.com/og-image.jpg">
+    <meta property="og:url" content="https://yourdomain.com/">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="신흥레저타운 - 자연 속에서 즐기는 사계절 레저">
+    <meta name="twitter:description" content="경기도 양주시 신흥레저타운, 사계절 수영장, 카바나, 불멍장, 가족과 함께하는 자연 속 레저, 온라인 예매 할인, 편리한 예약, 다양한 부대시설 안내">
+    <meta name="twitter:image" content="https://yourdomain.com/og-image.jpg">
+
+    <!-- 파비콘 -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
@@ -26,7 +47,7 @@
         }
         
         .hero-section {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://readdy.ai/api/search-image?query=A%20luxurious%20water%20park%20with%20multiple%20swimming%20pools%2C%20water%20slides%2C%20and%20cabanas%20surrounded%20by%20lush%20greenery.%20The%20scene%20shows%20a%20large%20adult%20pool%20with%20clear%20blue%20water%2C%20children%5Cs%20play%20area%20with%20colorful%20water%20features%2C%20and%20comfortable%20cabanas%20with%20lounge%20chairs.%20The%20atmosphere%20is%20sunny%20and%20vibrant%2C%20perfect%20for%20summer%20leisure.&width=1920&height=1080&seq=1&orientation=landscape');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://cvws.icloud-content.com/B/ASU3GK6Oph45hpdKcASKIY8hSfuvAVx9dlw-nMswYnyPpt2I88hHEgy4/%E1%84%80%E1%85%B3%E1%84%85%E1%85%B5%E1%86%B71.jpg?o=Asmiw1sIRIfYZM11HCFIqbi2eZjsWO0CEL3NTi5dt9wl&v=1&x=3&a=CAog9-QpattODtSNJDXPYxj68vl_OPGy0ixdVUucszIsMI4SbRCE5trW9TIYhMO22PUyIgEAUgQhSfuvWgRHEgy4aiav2RxWjskmBOAH4Veh9Ix-anJT2C3qRDNnTqChUl9QAxqtbuP_EHImbSce4256Phb1t5QUS7iZmNbJLqtsKljIy2cuSbIMu0_EY6X-sY4&e=1749579309&fl=&r=3f4df121-d591-42ae-9594-27da1537de89-1&k=vfrogGIUmscPhptkLcsVsQ&ckc=com.apple.clouddocs&ckz=com.apple.CloudDocs&p=54&s=FWh4hhu2rONZ4oPf-CtsviDH7fU&cd=i');
             background-size: cover;
             background-position: center;
         }
@@ -66,16 +87,16 @@
         }
     </style>
 </head>
-<body class="bg-gray-50">
+<body id="top" class="bg-gray-50">
     <header class="fixed w-full bg-white shadow-md z-50">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <a href="#" class="text-2xl font-['Pacifico'] text-primary">신흥레저타운</a>
             
             <nav class="hidden md:flex space-x-8">
-                <a href="#about" class="text-gray-700 hover:text-primary font-medium">소개</a>
+                <a href="#top" class="text-gray-700 hover:text-primary font-medium">홈</a>
                 <a href="#pricing" class="text-gray-700 hover:text-primary font-medium">요금안내</a>
                 <a href="#cabana" class="text-gray-700 hover:text-primary font-medium">카바나</a>
-                <a href="#reviews" class="text-gray-700 hover:text-primary font-medium">후기</a>
+                <a href="#guide" class="text-gray-700 hover:text-primary font-medium">이용안내</a>
                 <a href="#contact" class="text-gray-700 hover:text-primary font-medium">문의</a>
             </nav>
             
@@ -88,10 +109,10 @@
         
         <div id="mobile-menu" class="hidden md:hidden bg-white w-full border-t">
             <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
-                <a href="#about" class="text-gray-700 hover:text-primary font-medium py-2">소개</a>
+                <a href="#top" class="text-gray-700 hover:text-primary font-medium py-2">홈</a>
                 <a href="#pricing" class="text-gray-700 hover:text-primary font-medium py-2">요금안내</a>
                 <a href="#cabana" class="text-gray-700 hover:text-primary font-medium py-2">카바나</a>
-                <a href="#reviews" class="text-gray-700 hover:text-primary font-medium py-2">후기</a>
+                <a href="#guide" class="text-gray-700 hover:text-primary font-medium py-2">이용안내</a>
                 <a href="#contact" class="text-gray-700 hover:text-primary font-medium py-2">문의</a>
             </div>
         </div>
@@ -99,171 +120,111 @@
 
     <section class="hero-section h-screen flex items-center justify-center text-white pt-16">
         <div class="container mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold mb-4">SHIN HEUNG LEISURE TOWN</h1>
-            <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8">약 400석의 다양한 크기 카바나와, 약 200m 길이의 성인 풀, 놀이기구가 있는 어린이 수영장에서 더운 여름을 시원하게 날려버리세요!</p>
+            <h1 class="text-2xl md:text-3xl font-bold mb-4">피크닉 테파파크 </h1><h1 class="text-4xl md:text-6xl font-bold mb-4">"신흥레저타운"</h1>
+            <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8">예매하시면 현장 판매가보다 훨씬 가성비 있게 구입하실 수 있습니다.</p>
             <div class="flex flex-col md:flex-row gap-4 justify-center">
                 <a href="#booking" class="bg-primary hover:bg-primary/90 text-white py-3 px-8 rounded-button font-semibold text-lg whitespace-nowrap">입장권 예약하기</a>
                 <a href="#cabana" class="bg-white hover:bg-gray-100 text-primary py-3 px-8 rounded-button font-semibold text-lg whitespace-nowrap">카바나(평상) 예약하기</a>
             </div>
         </div>
     </section>
-
-    <section id="about" class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">신흥레저타운 소개</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                    <div class="w-16 h-16 flex items-center justify-center bg-primary/10 text-primary rounded-full mb-6">
-                        <i class="ri-women-line ri-2x"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">여성 전용 시설</h3>
-                    <p class="text-gray-600">여성 전용 화장실과 여성 전용 샤워실 신규 설치, 안전하고 쾌적하게 별도의 여성 전용 시설을 운영합니다.</p>
-                </div>
-                
-                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                    <div class="w-16 h-16 flex items-center justify-center bg-primary/10 text-primary rounded-full mb-6">
-                        <i class="ri-water-flash-line ri-2x"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">매일 수질 관리</h3>
-                    <p class="text-gray-600">수질 안전 준칙에 입각하여 매일매일 CLEANNING과 청결관리를 합니다. 깨끗하고 안전한 물에서 즐거운 시간을 보내세요.</p>
-                </div>
-                
-                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                    <div class="w-16 h-16 flex items-center justify-center bg-primary/10 text-primary rounded-full mb-6">
-                        <i class="ri-history-line ri-2x"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">30년 전통</h3>
-                    <p class="text-gray-600">30년 전통있는 신흥레저타운 수영장에서 정성껏 모시도록 하겠습니다. 오랜 경험과 노하우로 최상의 서비스를 제공합니다.</p>
-                </div>
-            </div>
-            
-            <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                    <div class="w-16 h-16 flex items-center justify-center bg-primary/10 text-primary rounded-full mb-6">
-                        <i class="ri-water-line ri-2x"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">🌊 워터월드</h3>
-                    <ul class="text-gray-600 space-y-2">
-                        <li>• 지하 300m 암반수 수영장</li>
-                        <li>• 400석 규모의 카바나</li>
-                        <li>• 취사 가능 및 개별 전기시설</li>
-                    </ul>
-                </div>
-                
-                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                    <div class="w-16 h-16 flex items-center justify-center bg-primary/10 text-primary rounded-full mb-6">
-                        <i class="ri-snowy-line ri-2x"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">❄️ 스노우월드</h3>
-                    <ul class="text-gray-600 space-y-2">
-                        <li>• 눈썰매, 빙어잡이, 스케이트장</li>
-                        <li>• 푸드존, 난방 대기존</li>
-                        <li>• 겨울 시즌 특별 이벤트</li>
-                    </ul>
-                </div>
-                
-                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                    <div class="w-16 h-16 flex items-center justify-center bg-primary/10 text-primary rounded-full mb-6">
-                        <i class="ri-plant-line ri-2x"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">🌳 피크닉월드</h3>
-                    <ul class="text-gray-600 space-y-2">
-                        <li>• 자연과 함께하는 소풍 공간</li>
-                        <li>• 단체 워크숍 및 행사장 대여 가능</li>
-                        <li>• 가족 나들이 최적의 장소</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="mt-16 bg-gray-50 p-8 rounded-lg">
-                <h3 class="text-xl font-bold mb-4">이용 정보</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="flex items-start">
-                        <div class="w-10 h-10 flex items-center justify-center text-primary mr-3">
-                            <i class="ri-time-line ri-lg"></i>
-                        </div>
-                        <div>
-                            <p class="font-medium">운영 시간</p>
-                            <p class="text-gray-600">10:00 ~ 17:00</p>
-                        </div>
-                    </div>
-                    
-                    <div class="flex items-start">
-                        <div class="w-10 h-10 flex items-center justify-center text-primary mr-3">
-                            <i class="ri-calendar-line ri-lg"></i>
-                        </div>
-                        <div>
-                            <p class="font-medium">휴무일</p>
-                            <p class="text-gray-600">시즌 중 연중무휴</p>
-                        </div>
-                    </div>
-                    
-                    <div class="flex items-start">
-                        <div class="w-10 h-10 flex items-center justify-center text-primary mr-3">
-                            <i class="ri-map-pin-line ri-lg"></i>
-                        </div>
-                        <div>
-                            <p class="font-medium">주소</p>
-                            <p class="text-gray-600">경기도 양주시 장흥면 삼상리</p>
-                        </div>
-                    </div>
-                    
-                    <div class="flex items-start">
-                        <div class="w-10 h-10 flex items-center justify-center text-primary mr-3">
-                            <i class="ri-phone-line ri-lg"></i>
-                        </div>
-                        <div>
-                            <p class="font-medium">문의 전화</p>
-                            <p class="text-gray-600">1551-1255</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+ 
     <section id="pricing" class="py-20 bg-gray-50">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">요금 안내</h2>
+            <h2 class="text-3xl font-bold text-center mb-12">시즌별 요금안내</h2>
             
-            <div class="bg-white rounded-lg shadow-lg p-6 md:p-8 max-w-4xl mx-auto">
-                <div class="flex border-b mb-6">
-                    <button id="tab-peak" class="tab-button py-3 px-6 font-medium text-primary border-b-2 border-primary">성수기</button>
-                    <button id="tab-offpeak" class="tab-button py-3 px-6 font-medium text-gray-500">비수기</button>
-                </div>
-                
-                <div id="peak-content" class="tab-content active">
-                    <div class="mb-4">
-                        <p class="text-gray-600 mb-2">기간: 7월 25일 ~ 8월 18일</p>
-                    </div>
-                    
-                    <div class="overflow-x-auto">
-                        <table class="w-full">
-                            <thead>
-                                <tr class="bg-gray-50">
-                                    <th class="py-3 px-4 text-left font-semibold text-gray-700">구분</th>
-                                    <th class="py-3 px-4 text-left font-semibold text-gray-700">범위</th>
-                                    <th class="py-3 px-4 text-left font-semibold text-gray-700">현장 판매가</th>
-                                    <th class="py-3 px-4 text-left font-semibold text-gray-700">예매 할인가</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="border-t">
-                                    <td class="py-4 px-4 font-medium">대인</td>
-                                    <td class="py-4 px-4 text-gray-600">14세 중등생 이상</td>
-                                    <td class="py-4 px-4">24,000원</td>
-                                    <td class="py-4 px-4 text-primary font-medium">19,200원</td>
-                                </tr>
-                                <tr class="border-t">
-                                    <td class="py-4 px-4 font-medium">소인</td>
-                                    <td class="py-4 px-4 text-gray-600">4세~13세 어린이</td>
-                                    <td class="py-4 px-4">20,000원</td>
-                                    <td class="py-4 px-4 text-primary font-medium">16,000원</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+            
+<div class="mb-6">
+    <h3 class="py-3 px-6 font-medium text-primary border-b-2 border-primary">성수기</h3>
+    <div class="bg-white rounded-lg shadow-lg p-6 md:p-8 max-w-4xl mx-auto">
+        <div class="mb-4">
+                  <p class="text-gray-600 mb-2">기간: 7월 19일 ~ 8월 24일</p>
+              </div>
+              
+              <div class="overflow-x-auto">
+                  <table class="min-w-full w-auto border-collapse text-sm md:text-base">
+                      <thead>
+                        <tr class="bg-gray-50">
+                            <th class="py-3 px-4 text-center font-semibold text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/50">구분</th>
+                            <th class="py-3 px-4 text-center font-semibold text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/50">범위</th>
+                            <th class="py-3 px-4 text-center font-semibold text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/50">현장 판매가</th>
+                            <th class="py-3 px-4 text-center font-semibold text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/50">예매 시(토휴일)</th>
+                            <th class="py-3 px-4 text-center font-semibold text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/50">예매 시(주중/평일)</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="border-t">
+                            <td class="py-3 px-2 text-center font-medium focus:outline-none focus:ring-2 focus:ring-primary/50">일반</td>
+                            <td class="py-3 px-2 text-center text-gray-600 focus:outline-none focus:ring-2 focus:ring-primary/50">14세 중등생 이상</td>
+                            <td class="py-3 px-2 text-center focus:outline-none focus:ring-2 focus:ring-primary/50">24,000원</td>
+                            <td class="py-3 px-2 text-center text-primary font-medium focus:outline-none focus:ring-2 focus:ring-primary/50">19,200원</td>
+                            <td class="py-3 px-2 text-center text-primary font-medium focus:outline-none focus:ring-2 focus:ring-primary/50">16,000원</td>
+                        </tr>
+                        <tr class="border-t">
+                            <td class="py-3 px-2 text-center font-medium focus:outline-none focus:ring-2 focus:ring-primary/50">어린이</td>
+                            <td class="py-3 px-2 text-center text-gray-600 focus:outline-none focus:ring-2 focus:ring-primary/50">4세~초등생 이하</td>
+                            <td class="py-3 px-2 text-center focus:outline-none focus:ring-2 focus:ring-primary/50">20,000원</td>
+                            <td class="py-3 px-2 text-center text-primary font-medium focus:outline-none focus:ring-2 focus:ring-primary/50">16,000원</td>
+                            <td class="py-3 px-2 text-center text-primary font-medium focus:outline-none focus:ring-2 focus:ring-primary/50">13,000원</td>
+                        </tr>
+                        <tr class="border-t">
+                            <td class="py-3 px-2 text-center font-medium focus:outline-none focus:ring-2 focus:ring-primary/50">유아</td>
+                            <td class="py-3 px-2 text-center text-gray-600 focus:outline-none focus:ring-2 focus:ring-primary/50">36개월 이하</td>
+                            <td class="py-3 px-2 text-center focus:outline-none focus:ring-2 focus:ring-primary/50">무료 입장</td>
+                            <td class="py-3 px-2 text-center text-primary font-medium focus:outline-none focus:ring-2 focus:ring-primary/50">무료 입장</td>
+                            <td class="py-3 px-2 text-center text-primary font-medium focus:outline-none focus:ring-2 focus:ring-primary/50">무료 입장</td>
+                        </tr>
+                    </tbody>
+                  </table>
+              </div>
+  </div>
+  
+  <!-- 비수기 -->
+  <div class="mb-6">
+    <h3 class="py-3 px-6 font-medium text-primary border-b-2 border-primary">비수기</h3>
+    <div class="bg-white rounded-lg shadow-lg p-6 md:p-8 max-w-4xl mx-auto">
+    <div class="mb-4">
+        <p class="text-gray-600 mb-2">기간: 성수기 외 개장 기간</p>
+    </div>
+    
+    <div class="overflow-x-auto">
+        <table class="min-w-full w-auto border-collapse text-sm md:text-base">
+            <thead>
+                <tr class="bg-gray-50">
+                    <th class="py-3 px-4 text-center font-semibold text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/50">구분</th>
+                    <th class="py-3 px-4 text-center font-semibold text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/50">범위</th>
+                    <th class="py-3 px-4 text-center font-semibold text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/50">현장 판매가</th>
+                    <th class="py-3 px-4 text-center font-semibold text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/50">예매 시(토휴일)</th>
+                    <th class="py-3 px-4 text-center font-semibold text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/50">예매 시(주중/평일)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="border-t">
+                    <td class="py-3 px-2 text-center font-medium focus:outline-none focus:ring-2 focus:ring-primary/50">일반</td>
+                    <td class="py-3 px-2 text-center text-gray-600 focus:outline-none focus:ring-2 focus:ring-primary/50">14세 중등생 이상</td>
+                    <td class="py-3 px-2 text-center focus:outline-none focus:ring-2 focus:ring-primary/50">24,000원</td>
+                    <td class="py-3 px-2 text-center text-primary font-medium focus:outline-none focus:ring-2 focus:ring-primary/50">19,200원</td>
+                    <td class="py-3 px-2 text-center text-primary font-medium focus:outline-none focus:ring-2 focus:ring-primary/50">16,000원</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="py-3 px-2 text-center font-medium focus:outline-none focus:ring-2 focus:ring-primary/50">어린이</td>
+                    <td class="py-3 px-2 text-center text-gray-600 focus:outline-none focus:ring-2 focus:ring-primary/50">4세~초등생 이하</td>
+                    <td class="py-3 px-2 text-center focus:outline-none focus:ring-2 focus:ring-primary/50">20,000원</td>
+                    <td class="py-3 px-2 text-center text-primary font-medium focus:outline-none focus:ring-2 focus:ring-primary/50">16,000원</td>
+                    <td class="py-3 px-2 text-center text-primary font-medium focus:outline-none focus:ring-2 focus:ring-primary/50">13,000원</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="py-3 px-2 text-center font-medium focus:outline-none focus:ring-2 focus:ring-primary/50">유아</td>
+                    <td class="py-3 px-2 text-center text-gray-600 focus:outline-none focus:ring-2 focus:ring-primary/50">36개월 이하</td>
+                    <td class="py-3 px-2 text-center focus:outline-none focus:ring-2 focus:ring-primary/50">무료 입장</td>
+                    <td class="py-3 px-2 text-center text-primary font-medium focus:outline-none focus:ring-2 focus:ring-primary/50">무료 입장</td>
+                    <td class="py-3 px-2 text-center text-primary font-medium focus:outline-none focus:ring-2 focus:ring-primary/50">무료 입장</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
+               
                     
                     <div class="mt-6 bg-primary/5 p-4 rounded-lg flex items-start">
                         <div class="w-6 h-6 flex items-center justify-center text-primary mr-2 mt-0.5">
@@ -274,36 +235,7 @@
                 </div>
                 
                 <div id="offpeak-content" class="tab-content">
-                    <div class="mb-4">
-                        <p class="text-gray-600 mb-2">기간: 7월 4일 ~ 7월 24일, 8월 19일 ~ 8월 25일</p>
-                    </div>
                     
-                    <div class="overflow-x-auto">
-                        <table class="w-full">
-                            <thead>
-                                <tr class="bg-gray-50">
-                                    <th class="py-3 px-4 text-left font-semibold text-gray-700">구분</th>
-                                    <th class="py-3 px-4 text-left font-semibold text-gray-700">범위</th>
-                                    <th class="py-3 px-4 text-left font-semibold text-gray-700">현장 판매가</th>
-                                    <th class="py-3 px-4 text-left font-semibold text-gray-700">예매 할인가</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="border-t">
-                                    <td class="py-4 px-4 font-medium">대인</td>
-                                    <td class="py-4 px-4 text-gray-600">14세 중등생 이상</td>
-                                    <td class="py-4 px-4">22,000원</td>
-                                    <td class="py-4 px-4 text-primary font-medium">17,600원</td>
-                                </tr>
-                                <tr class="border-t">
-                                    <td class="py-4 px-4 font-medium">소인</td>
-                                    <td class="py-4 px-4 text-gray-600">4세~13세 어린이</td>
-                                    <td class="py-4 px-4">20,000원</td>
-                                    <td class="py-4 px-4 text-primary font-medium">16,000원</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
                     
                     <div class="mt-6 bg-primary/5 p-4 rounded-lg flex items-start">
                         <div class="w-6 h-6 flex items-center justify-center text-primary mr-2 mt-0.5">
@@ -315,7 +247,7 @@
             </div>
             
             <div class="mt-12 text-center">
-                <a href="#booking" id="booking" class="inline-block bg-primary hover:bg-primary/90 text-white py-3 px-8 rounded-button font-semibold text-lg whitespace-nowrap">지금 예약하기</a>
+                <a href="#booking" id="booking" class="inline-block bg-primary hover:bg-primary/90 text-white py-3 px-8 rounded-button font-semibold text-lg whitespace-nowrap">입장권 예약하기</a>
             </div>
         </div>
     </section>
@@ -326,7 +258,7 @@
             
             <div class="bg-white rounded-lg shadow-lg overflow-hidden max-w-5xl mx-auto mb-12">
                 <div class="aspect-w-16 aspect-h-9 w-full">
-                    <img src="https://readdy.ai/api/search-image?query=A%20detailed%20map%20or%20layout%20diagram%20of%20a%20water%20park%20showing%20different%20cabana%20areas.%20The%20image%20shows%20a%20birds%20eye%20view%20of%20the%20water%20park%20with%20clearly%20marked%20sections%20for%20different%20types%20of%20cabanas%2C%20swimming%20pools%2C%20and%20facilities.%20The%20layout%20is%20color-coded%20to%20distinguish%20between%20different%20cabana%20types%20%28Shin%20Heung%2C%20Leisure%2C%20and%20Santorini%29%20with%20their%20locations%20relative%20to%20the%20pools%20and%20other%20amenities.&width=1200&height=800&seq=2&orientation=landscape" alt="카바나 배치도" class="w-full h-full object-cover">
+                    <img src="https://cvws.icloud-content.com/B/Ac-ELqok3NrjD7y98D_ftyVQOY5IAQrNPUUoZKc1AclWRCpixvjU1i2C/%E1%84%8F%E1%85%A1%E1%84%87%E1%85%A1%E1%84%82%E1%85%A1+%E1%84%87%E1%85%A2%E1%84%8E%E1%85%B5%E1%84%83%E1%85%A9_25%E1%84%82%E1%85%A7%E1%86%AB%E1%84%83%E1%85%A91.jpg?o=AiqCk-vGPtSkWC33Ed1UDi3QaNXdbgxm2jav933apm9Q&v=1&x=3&a=CAogKGRI6X33FKbDqKtdy_pJ4KAxfVwOcxrtMYmkuaCbutsSbRDEoO_W9TIYxP3K2PUyIgEAUgRQOY5IWgTU1i2CaiZRKpU0YP-fCT5UkpCtA05duFj1OwmzZ4JinoqKy7LTrOhjFtt6dXImi4auR37YZZB83-YCl83bVJotC9DEGyVT0dG1ING5pd6jmIhZEVk&e=1749579644&fl=&r=4a64a1c7-98a0-4af9-8ac8-d167c5ed9981-1&k=mF77vh5-6HU0Yo7hSwWSQw&ckc=com.apple.clouddocs&ckz=com.apple.CloudDocs&p=54&s=O6Cg3jaMYe_nHBnCOerUgiGTAIY&cd=i" alt="카바나 배치도" class="w-full h-full object-cover">
                 </div>
                 <div class="p-6">
                     <h3 class="text-xl font-bold mb-4">카바나 배치도</h3>
@@ -338,42 +270,51 @@
                 <h3 class="text-xl font-bold mb-6">가격표</h3>
                 
                 <div class="overflow-x-auto">
-                    <table class="w-full">
+                    <table class="min-w-full w-auto border-collapse text-sm md:text-base">
                         <thead>
                             <tr class="bg-gray-50">
-                                <th class="py-3 px-4 text-left font-semibold text-gray-700">구분</th>
-                                <th class="py-3 px-4 text-left font-semibold text-gray-700">내용</th>
-                                <th class="py-3 px-4 text-left font-semibold text-gray-700">사용요금/일</th>
-                                <th class="py-3 px-4 text-left font-semibold text-gray-700">비고</th>
-                            </tr>
+                                <th class="py-3 px-4 text-center font-semibold text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/50">구분</th>
+                                <th class="py-3 px-4 text-center font-semibold text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/50">내용</th>
+                                <th class="py-3 px-4 text-center font-semibold text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/50">성수기</th>
+                                <th class="py-3 px-4 text-center font-semibold text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/50">비수기</th>
+                             </tr>
                         </thead>
                         <tbody>
                             <tr class="border-t">
-                                <td class="py-4 px-4 font-medium">신흥</td>
-                                <td class="py-4 px-4 text-gray-600">수영장 주변(Pool Side) 독립형 평상</td>
-                                <td class="py-4 px-4">
-                                    <div>비수기: 30,000원</div>
-                                    <div>성수기: 50,000원</div>
+                                <td class="py-3 px-2 text-center font-medium">신흥</td>
+                                <td class="py-3 px-2 text-center text-gray-600">수영장 주변(Pool Side) 독립형 평상</td>
+                                <td class="py-3 px-2 text-center">
+                                    <div>토휴일:70,000원</div>
+                                    <div>평  일:50,000원</div>
                                 </td>
-                                <td class="py-4 px-4 text-gray-600">지정 좌석제</td>
+                                <td class="py-3 px-2 text-center">
+                                    <div>토휴일:50,000원</div>
+                                    <div>평  일:40,000원</div>
+                                </td>
+                     
+                            <tr class="border-t">
+                                <td class="py-3 px-2 text-center font-medium focus:outline-none focus:ring-2 focus:ring-primary/50">레저</td>
+                                <td class="py-3 px-2 text-center text-gray-600 focus:outline-none focus:ring-2 focus:ring-primary/50">식당 앞 파고라 / 어린이 수영장(Pool Side) 더블평상</td>
+                                <td class="py-3 px-2 text-center">
+                                    <div>토휴일:70,000원</div>
+                                    <div>평  일:50,000원</div>
+                                </td>
+                                <td class="py-3 px-2 text-center">
+                                    <div>토휴일:50,000원</div>
+                                    <div>평  일:40,000원</div>
+                                </td>
+                             
                             </tr>
                             <tr class="border-t">
-                                <td class="py-4 px-4 font-medium">레저</td>
-                                <td class="py-4 px-4 text-gray-600">식당 앞 파고라 / 어린이 수영장(Pool Side) 더블평상</td>
-                                <td class="py-4 px-4">
-                                    <div>비수기: 40,000원</div>
-                                    <div>성수기: 70,000원</div>
+                                <td class="py-3 px-2 text-center font-medium focus:outline-none focus:ring-2 focus:ring-primary/50">산토리니</td>
+                                <td class="py-3 px-2 text-center text-gray-600 focus:outline-none focus:ring-2 focus:ring-primary/50">어린이 수영장 주변에 위치한 넓고 쾌적하게 이용가능한 평상</td>
+                                <td class="py-3 px-2 text-center">
+                                   <div>상시: 100,000원</div>
                                 </td>
-                                <td class="py-4 px-4 text-gray-600"></td>
-                            </tr>
-                            <tr class="border-t">
-                                <td class="py-4 px-4 font-medium">산토리니</td>
-                                <td class="py-4 px-4 text-gray-600">어린이 수영장 주변에 위치한 넓고 쾌적하게 이용가능한 평상</td>
-                                <td class="py-4 px-4">
-                                    <div>비수기: 50,000원</div>
-                                    <div>성수기: 100,000원</div>
+                                <td class="py-3 px-2 text-center">
+                                    <div>상시: 100,000원</div>
                                 </td>
-                                <td class="py-4 px-4 text-gray-600"></td>
+
                             </tr>
                         </tbody>
                     </table>
@@ -383,7 +324,7 @@
                     <div class="w-6 h-6 flex items-center justify-center text-primary mr-2 mt-0.5">
                         <i class="ri-information-line"></i>
                     </div>
-                    <p class="text-gray-700">하나(1ea)의 평상당 4인 이내 사용 부탁드립니다.</p>
+                    <p class="text-gray-700">신흥/레저(1ea)의 평상당 4인 이용 한정(추가1인까지 허용 5,000원/ 6명이상 사용시 평상 2개 사용)</p>
                 </div>
             </div>
             
@@ -393,339 +334,117 @@
         </div>
     </section>
 
-    <section class="py-20 bg-gray-50">
+    <section id="guide" class="py-20 bg-gray-50">
         <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-4">STUDIO PARK</h2>
+            <h2 class="text-3xl font-bold mb-4">이용안내</h2>
             <p class="text-xl text-gray-600 mb-8">신흥레저파크에서 자연과 함께 행복한 추억을 만드세요!</p>
             
-            <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <a href="#booking" class="bg-primary hover:bg-primary/90 text-white py-3 px-8 rounded-button font-semibold text-lg whitespace-nowrap">입장권 예약하기</a>
-                <a href="#cabana" class="bg-white hover:bg-gray-100 text-primary border border-primary py-3 px-8 rounded-button font-semibold text-lg whitespace-nowrap">카바나(평상) 예약하기</a>
+            <div class="container mx-auto px-4 text-left mb-8">
+                <h2 class="text-2xl font-bold mb-4">운영규정</h2>
+                <ul style="background:#f8fafc; border:1px solid #e5e7eb; border-radius:8px; padding:20px; font-size:16px; line-height:1.8;">
+                    <li class="mb-2">* 예매는 물론 당일 구매 및 당일 사용 가능합니다.</li>
+                    <li class="mb-2">* 구매하신 티켓은 각 시즌 기간내에서만 환불 가능합니다. (기간 경과한 비수기 사용권의 성수기 사용 불가합니다.)</li>
+                    <li class="mb-2">* 현장 도착 순으로 입장 가능합니다.</li>
+                    <li class="mb-2">* 카바나(평상) 은 유료 판매입니다. 사전 예약 하시지 않을 경우 현장 판매가 마감될 수 있습니다.</li>
+                    <li class="mb-2">* 카바나(평상) 이용은 1면에 4인까지 이용가능합니다. 단, 어린이 고객의 1명 추가 시 1인당 5천원의 사용료가 추가됩니다. (6인인 경우 산토리니 구역을 예매 하시거나 일반 카바나 2면을 예약하시기 바랍니다.</li>
+                    <li class="mb-2">* 매점 및 식당 운영합니다.</li>
+                </ul>
             </div>
         </div>
     </section>
-
-    <section id="reviews" class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">고객 후기</h2>
-            
-            <div class="relative">
-                <div class="review-slider overflow-hidden">
-                    <div class="review-track flex transition-transform duration-500" id="reviewTrack">
-                        <div class="review-slide min-w-full md:min-w-[33.333%] p-4">
-                            <div class="bg-white rounded-lg shadow-lg p-6 h-full">
-                                <div class="flex items-center mb-4">
-                                    <div class="w-12 h-12 rounded-full bg-gray-200 overflow-hidden mr-4">
-                                        <img src="https://readdy.ai/api/search-image?query=A%20professional%20headshot%20of%20a%20Korean%20woman%20in%20her%2030s%20with%20a%20friendly%20smile%2C%20looking%20directly%20at%20the%20camera.%20The%20image%20has%20a%20clean%2C%20simple%20background%20and%20good%20lighting%20to%20highlight%20her%20face.&width=100&height=100&seq=3&orientation=squarish" alt="이미지" class="w-full h-full object-cover">
-                                    </div>
-                                    <div>
-                                        <h4 class="font-bold">김지연</h4>
-                                        <div class="flex text-yellow-400">
-                                            <i class="ri-star-fill"></i>
-                                            <i class="ri-star-fill"></i>
-                                            <i class="ri-star-fill"></i>
-                                            <i class="ri-star-fill"></i>
-                                            <i class="ri-star-fill"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <p class="text-gray-600">아이들과 함께 방문했는데 정말 좋았어요! 카바나도 넓고 쾌적했고, 수영장 물도 깨끗했습니다. 특히 여성 전용 시설이 새로 생겨서 더 편하게 이용할 수 있었어요. 다음에 또 방문할 예정입니다.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="review-slide min-w-full md:min-w-[33.333%] p-4">
-                            <div class="bg-white rounded-lg shadow-lg p-6 h-full">
-                                <div class="flex items-center mb-4">
-                                    <div class="w-12 h-12 rounded-full bg-gray-200 overflow-hidden mr-4">
-                                        <img src="https://readdy.ai/api/search-image?query=A%20professional%20headshot%20of%20a%20Korean%20man%20in%20his%2040s%20with%20a%20friendly%20smile%2C%20looking%20directly%20at%20the%20camera.%20The%20image%20has%20a%20clean%2C%20simple%20background%20and%20good%20lighting%20to%20highlight%20his%20face.&width=100&height=100&seq=4&orientation=squarish" alt="이미지" class="w-full h-full object-cover">
-                                    </div>
-                                    <div>
-                                        <h4 class="font-bold">박성민</h4>
-                                        <div class="flex text-yellow-400">
-                                            <i class="ri-star-fill"></i>
-                                            <i class="ri-star-fill"></i>
-                                            <i class="ri-star-fill"></i>
-                                            <i class="ri-star-fill"></i>
-                                            <i class="ri-star-half-fill"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <p class="text-gray-600">가족 모임으로 산토리니 카바나를 예약했는데, 넓고 쾌적해서 정말 만족스러웠습니다. 어린이 수영장 근처라 아이들 관리하기도 편했고, 시설도 깨끗하게 관리되어 있었어요. 온라인 예약으로 할인도 받아서 더 좋았습니다.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="review-slide min-w-full md:min-w-[33.333%] p-4">
-                            <div class="bg-white rounded-lg shadow-lg p-6 h-full">
-                                <div class="flex items-center mb-4">
-                                    <div class="w-12 h-12 rounded-full bg-gray-200 overflow-hidden mr-4">
-                                        <img src="https://readdy.ai/api/search-image?query=A%20professional%20headshot%20of%20a%20Korean%20woman%20in%20her%2020s%20with%20a%20friendly%20smile%2C%20looking%20directly%20at%20the%20camera.%20The%20image%20has%20a%20clean%2C%20simple%20background%20and%20good%20lighting%20to%20highlight%20her%20face.&width=100&height=100&seq=5&orientation=squarish" alt="이미지" class="w-full h-full object-cover">
-                                    </div>
-                                    <div>
-                                        <h4 class="font-bold">이수진</h4>
-                                        <div class="flex text-yellow-400">
-                                            <i class="ri-star-fill"></i>
-                                            <i class="ri-star-fill"></i>
-                                            <i class="ri-star-fill"></i>
-                                            <i class="ri-star-fill"></i>
-                                            <i class="ri-star-fill"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <p class="text-gray-600">친구들과 함께 여름 휴가로 다녀왔어요. 성인 풀이 생각보다 넓고 깊어서 좋았고, 카바나도 편안했습니다. 특히 매일 청소를 한다고 하는데 정말 깨끗했어요! 주변 관광지도 가까워서 하루 종일 즐겁게 보냈습니다.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="review-slide min-w-full md:min-w-[33.333%] p-4">
-                            <div class="bg-white rounded-lg shadow-lg p-6 h-full">
-                                <div class="flex items-center mb-4">
-                                    <div class="w-12 h-12 rounded-full bg-gray-200 overflow-hidden mr-4">
-                                        <img src="https://readdy.ai/api/search-image?query=A%20professional%20headshot%20of%20a%20Korean%20man%20in%20his%2030s%20with%20a%20friendly%20smile%2C%20looking%20directly%20at%20the%20camera.%20The%20image%20has%20a%20clean%2C%20simple%20background%20and%20good%20lighting%20to%20highlight%20his%20face.&width=100&height=100&seq=6&orientation=squarish" alt="이미지" class="w-full h-full object-cover">
-                                    </div>
-                                    <div>
-                                        <h4 class="font-bold">정민우</h4>
-                                        <div class="flex text-yellow-400">
-                                            <i class="ri-star-fill"></i>
-                                            <i class="ri-star-fill"></i>
-                                            <i class="ri-star-fill"></i>
-                                            <i class="ri-star-fill"></i>
-                                            <i class="ri-star-line"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <p class="text-gray-600">회사 워크샵으로 단체 예약했는데, 직원분들이 친절하게 안내해주셔서 좋았습니다. 카바나도 넉넉하게 배정받아서 편하게 이용했어요. 다만 주말이라 사람이 많았던 점은 아쉬웠지만, 시설 자체는 만족스러웠습니다.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <button id="prevReview" class="absolute left-0 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-white rounded-full shadow-md z-10 text-gray-700 hover:text-primary">
-                    <i class="ri-arrow-left-s-line ri-lg"></i>
-                </button>
-                
-                <button id="nextReview" class="absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-white rounded-full shadow-md z-10 text-gray-700 hover:text-primary">
-                    <i class="ri-arrow-right-s-line ri-lg"></i>
-                </button>
-            </div>
-            
-            <div class="mt-8 flex justify-center">
-                <div class="flex space-x-2">
-                    <button class="w-3 h-3 rounded-full bg-primary" data-index="0"></button>
-                    <button class="w-3 h-3 rounded-full bg-gray-300" data-index="1"></button>
-                    <button class="w-3 h-3 rounded-full bg-gray-300" data-index="2"></button>
-                    <button class="w-3 h-3 rounded-full bg-gray-300" data-index="3"></button>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    <!-- 수영장 이용시 주의사항 섹션 -->
+    <div class="container mx-auto px-4 text-left mb-8">
+    <h2 class="text-2xl font-bold mb-4">수영장 이용시 주의사항</h2>
+    <ul style="background:#f8fafc; border:1px solid #e5e7eb; border-radius:8px; padding:20px; font-size:16px; line-height:1.8; color:#e53e3e; font-weight:bold;">
+      <li class="mb-2">※ 정부의 강력한 권고 및 지도에 따라 아래와 같이 반입 금지됩니다.</li>
+      <li class="mb-2">■ 유리 용기 주류 및 음료 반입 금지 시행</li>
+      <li class="mb-2">- 손님 및 어린이 안전 사고 사례들이 발생하여 유리병(주류) 사용 및 반입을 관계당국에서 철저히 관리 하오니 우리 어린이들과 손님들의 안전을 위하여 반드시 지켜 주시기 바랍니다.</li>
+      <li class="mb-2">- 유리용기(주류) 현장 취식 발견 시 퇴장 조치될 수 있으며 이 경우 각 이용료 반납은 되지 않습니다. 이점 유의 하시기 바랍니다.</li>
+      <li class="mb-2">- 피트 및 플라스틱 용기 반입 가능</li>
+      <li class="mb-2">- 매점에서 플라스틱 주류 및 캔류 판매합니다.</li>
+      <li class="mb-2">※  쓰레기 자진 회수 실시 : 일반 쓰레기 비닐 제공(종량제 봉투 아닙니다.)</li>
+      <li class="mb-2">※ 음주자 수영장(POOL) 입수 금지 : 음주 후 수영장 입수하여 발생한 사고에 대해서는 당사가 책임지지 않습니다.</li>
+      <li class="mb-2">※ 개인 화기(부르스타)의 사용은 가능하나 사용 중 과실에 의한 사고는 당사가 책임지지 않습니다. 기타 버너등의 화기는 사용할 수 없습니다. 또한 화기 사용 중 사고로 주변분들에게 피해가 발생 시 사용자 본인이 보상 및 배상등의 책임이 있습니다.</li>
+      <li class="mb-2">※ 지참하신 취식물 섭취로 인한 식중독, 급체등의 사고에 대해서는 당사가 책임지지 않습니다. 김밥, 쫄면, 냉면등 여름철 식중독에 민감한 음식물의 취식은 자제하여 주시기 바랍니다.</li>
+      <li class="mb-2"> ※ 일부 지정 흡연구역을 제외하고는 워터월드 전 지역이 금연 구역입니다.</li>   
+      <li class="mb-2"> 뛰어 다니지 마십시오. 특히 어린이를 동반한 고객께서는 뛰어다니지 않도록 주의 하여 주십시오. 뛰어 다니다가 본인 부주의로 발생한 사고에는 당사가 책임지지 않습니다.</li> 
+      <li class="mb-2"> 안내 요원의 지시에 따라 주십시오. 당사의 라이프가드 및 안내요원의 안내 및 지시에 불응하여 발생한 사고에 대해서는 당사가 책임지지 않습니다.</li>  
+    </ul>
+  </div>
+     
+     <!-- 문의하기 섹션 -->
     <section id="contact" class="py-20 bg-gray-50">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-12">문의하기</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-bold mb-6">연락처 정보</h3>
-                    
-                    <div class="space-y-4">
-                        <div class="flex items-start">
-                            <div class="w-10 h-10 flex items-center justify-center text-primary mr-3">
-                                <i class="ri-phone-line ri-lg"></i>
-                            </div>
-                            <div>
-                                <p class="font-medium">전화번호</p>
-                                <p class="text-gray-600">1551-1255</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="w-10 h-10 flex items-center justify-center text-primary mr-3">
-                                <i class="ri-mail-line ri-lg"></i>
-                            </div>
-                            <div>
-                                <p class="font-medium">이메일</p>
-                                <p class="text-gray-600">studionw@naver.com</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="w-10 h-10 flex items-center justify-center text-primary mr-3">
-                                <i class="ri-map-pin-line ri-lg"></i>
-                            </div>
-                            <div>
-                                <p class="font-medium">주소</p>
-                                <p class="text-gray-600">경기도 양주시 장흥면 삼상리</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="w-10 h-10 flex items-center justify-center text-primary mr-3">
-                                <i class="ri-time-line ri-lg"></i>
-                            </div>
-                            <div>
-                                <p class="font-medium">운영 시간</p>
-                                <p class="text-gray-600">10:00 ~ 17:00 (시즌 중 연중무휴)</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="mt-8">
-                        <h4 class="font-medium mb-3">주변 관광지</h4>
-                        <ul class="text-gray-600 space-y-2">
-                            <li>• 장흥유원지 (차량 5분 거리)</li>
-                            <li>• 세계문화유산 온릉 (차량 15분 거리)</li>
-                            <li>• 가나아트파크 (차량 10분 거리)</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-bold mb-6">문의 양식</h3>
-                    
-                    <form>
-                        <div class="mb-4">
-                            <label for="name" class="block text-gray-700 font-medium mb-2">이름</label>
-                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary" placeholder="이름을 입력하세요">
-                        </div>
-                        
-                        <div class="mb-4">
-                            <label for="email" class="block text-gray-700 font-medium mb-2">이메일</label>
-                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary" placeholder="이메일을 입력하세요">
-                        </div>
-                        
-                        <div class="mb-4">
-                            <label for="phone" class="block text-gray-700 font-medium mb-2">전화번호</label>
-                            <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary" placeholder="전화번호를 입력하세요">
-                        </div>
-                        
-                        <div class="mb-4">
-                            <label for="inquiry" class="block text-gray-700 font-medium mb-2">문의 유형</label>
-                            <div class="relative">
-                                <select id="inquiry" class="w-full px-4 py-2 border border-gray-300 rounded appearance-none focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary pr-8">
-                                    <option value="">문의 유형을 선택하세요</option>
-                                    <option value="reservation">예약 문의</option>
-                                    <option value="pricing">요금 문의</option>
-                                    <option value="facility">시설 문의</option>
-                                    <option value="group">단체 예약 문의</option>
-                                    <option value="other">기타 문의</option>
-                                </select>
-                                <div class="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
-                                    <i class="ri-arrow-down-s-line"></i>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="mb-6">
-                            <label for="message" class="block text-gray-700 font-medium mb-2">문의 내용</label>
-                            <textarea id="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary" placeholder="문의 내용을 입력하세요"></textarea>
-                        </div>
-                        
-                        <div class="flex items-center mb-6">
-                            <input type="checkbox" id="privacy" class="custom-checkbox">
-                            <label for="privacy" class="ml-2 text-gray-700">개인정보 수집 및 이용에 동의합니다.</label>
-                        </div>
-                        
-                        <button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white py-3 px-4 rounded-button font-semibold whitespace-nowrap">문의하기</button>
-                    </form>
-                </div>
+            <div class="flex justify-center">
+                <a href="https://pf.kakao.com/_카카오톡채널ID" target="_blank"
+                    class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-4 px-8 rounded-full text-xl shadow-lg flex items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/kakaotalk.svg" alt="카카오톡" style="width:32px; height:32px; margin-right:12px;">
+                    카카오톡 채널로 문의하기
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- 오시는길 섹션 시작 -->
-    <section id="location" class="bg-white py-16 border-t border-gray-200">
-      <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-8">오시는길</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <div>
-            <!-- 네이버 지도 iframe 예시 (구글 지도도 가능) -->
-            <iframe src="https://map.naver.com/v5/search/경기도%20양주시%20장흥면%20삼상리" width="100%" height="320" style="border:0; border-radius:12px;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-          <div>
-            <div class="bg-gray-50 rounded-lg p-6 shadow">
-              <h3 class="text-xl font-bold mb-2">주소</h3>
-              <p class="mb-4 text-gray-700">경기도 양주시 장흥면 삼상리</p>
-              <h3 class="text-xl font-bold mb-2">대중교통 안내</h3>
-              <ul class="list-disc pl-5 text-gray-700 mb-4">
-                <li>지하철 1호선 덕정역 하차 → 80번 버스 환승 → 삼상리 정류장 하차</li>
-                <li>버스 80, 360, 360-1번 이용 → 삼상리 정류장 하차</li>
-              </ul>
-              <h3 class="text-xl font-bold mb-2">문의</h3>
-              <p class="text-gray-700">전화: 1551-1255<br>이메일: studionw@naver.com</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- 오시는길 섹션 끝 -->
+ <!-- 오시는길 섹션 - 네이버 지도 -->
+<section id="location" class="bg-white py-0 border-t border-gray-200">
+  <div class="w-full h-80 md:h-[480px] relative overflow-hidden">
+    <iframe src="https://naver.me/F6nIIlLk" width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy"></iframe>
+  </div>
+</section>
+
 
     <footer class="bg-gray-800 text-white py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-['Pacifico'] mb-4">신흥레저타운</h3>
-                    <p class="text-gray-400 mb-4">자연 속에서 즐기는 사계절 레저, 신흥레저타운에서 특별한 경험을 만나보세요.</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition-colors">
-                            <i class="ri-instagram-line"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition-colors">
-                            <i class="ri-facebook-fill"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition-colors">
-                            <i class="ri-kakao-talk-fill"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-bold mb-4">이용 안내</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-white">운영 시간</a></li>
-                        <li><a href="#" class="hover:text-white">이용 요금</a></li>
-                        <li><a href="#" class="hover:text-white">카바나 안내</a></li>
-                        <li><a href="#" class="hover:text-white">오시는길</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-bold mb-4">고객 지원</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-white">자주 묻는 질문</a></li>
-                        <li><a href="#" class="hover:text-white">예약 방법</a></li>
-                        <li><a href="#" class="hover:text-white">환불 정책</a></li>
-                        <li><a href="#" class="hover:text-white">문의하기</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-bold mb-4">연락처</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li class="flex items-start">
-                            <i class="ri-map-pin-line mr-2 mt-1"></i>
-                            <span>경기도 양주시 장흥면 삼상리</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="ri-phone-line mr-2 mt-1"></i>
-                            <span>1551-1255</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="ri-mail-line mr-2 mt-1"></i>
-                            <span>studionw@naver.com</span>
-                        </li>
-                    </ul>
-                </div>
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-8">
+          <div class="mb-8 md:mb-0">
+            <h3 class="text-2xl font-['Pacifico'] mb-4">신흥레저타운</h3>
+            <p class="text-gray-400 mb-4">자연 속에서 즐기는 사계절 레저, 신흥레저타운에서 특별한 경험을 만나보세요.</p>
+            <div class="flex space-x-4 mb-4">
+              <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition-colors">
+                <i class="ri-instagram-line"></i>
+              </a>
+              <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition-colors">
+                <i class="ri-naver-line"></i>
+              </a>
+              <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition-colors">
+                <i class="ri-kakao-talk-fill"></i>
+              </a>
             </div>
-            
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 신흥레저타운. All rights reserved.</p>
-            </div>
+          </div>
+          <div class="mb-8 md:mb-0">
+            <h4 class="text-lg font-bold mb-4">회사정보</h4>
+            <ul class="space-y-2 text-gray-400 text-sm">
+              <li>(주)스튜디오 뉴웨이브</li>
+              <li>대표이사 : 강성모</li>
+              <li>Address : 경기도 양주시 장흥면 유원지로 406-9</li>
+              <li>Business No : 351-88-00769</li>
+              <li>예약 입금 계좌 : KB국민은행 763601-04-182538 (예금주 : 스튜디오뉴웨이브)</li>
+              <li>Tel : 1551-1255 | FAX : 031-855-5032</li>
+              <li>Mail : shaa10@naver.com</li>
+            </ul>
+          </div>
         </div>
+        <footer ...>
+  ...
+  <div class="text-center mt-4">
+    <a href="/admin.html" class="text-xs text-gray-400 hover:text-primary underline" target="_blank">뉴웨이브 관리자</a>
+  </div>
+</footer>
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 text-sm">
+          <p>&copy; 2025 신흥레저타운. All rights reserved.</p>
+        </div>
+      </div>
+
     </footer>
 
-    <div class="fixed bottom-6 right-6 z-50">
-        <a href="#booking" class="flex items-center justify-center bg-primary hover:bg-primary/90 text-white w-14 h-14 rounded-full shadow-lg">
-            <i class="ri-calendar-check-line ri-lg"></i>
-        </a>
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-4 items-end">
+      <a href="#booking" aria-label="입장권 예약하기" class="flex items-center justify-center bg-primary hover:bg-primary/90 text-white w-14 h-14 rounded-full shadow-lg focus:ring-2 focus:ring-primary/50 cursor-pointer" title="입장권 예약하기">
+        <i class="ri-ticket-line ri-lg"></i>
+      </a>
+      <a href="#cabana" aria-label="카바나 예약하기" class="flex items-center justify-center bg-yellow-400 hover:bg-yellow-500 text-black w-14 h-14 rounded-full shadow-lg focus:ring-2 focus:ring-yellow-300 cursor-pointer" title="카바나 예약하기">
+        <i class="ri-home-8-line ri-lg"></i>
+      </a>
     </div>
 
     <script id="mobileMenuScript">
@@ -887,6 +606,105 @@
         });
     </script>
 
+    <script id="popupDisplayScript">
+        document.addEventListener('DOMContentLoaded', function() {
+            const mainPopup = document.getElementById('mainPopup');
+            const closePopup = document.getElementById('closePopup');
+            const doNotShowAgain = document.getElementById('doNotShowAgain');
+            const popupDisplayTitle = document.getElementById('popupDisplayTitle');
+            const popupDisplayContent = document.getElementById('popupDisplayContent');
+            const popupDisplayImage = document.getElementById('popupDisplayImage');
+            const popupDisplayLink = document.getElementById('popupDisplayLink');
+            const popupDisplayImageContainer = document.getElementById('popupDisplayImageContainer');
+
+            // Function to check if the popup should be displayed
+            function shouldShowPopup(popupId) {
+                const lastClosedTime = localStorage.getItem(`popup_${popupId}_closed`);
+                if (lastClosedTime) {
+                    const twentyFourHours = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
+                    if (Date.now() - parseInt(lastClosedTime) < twentyFourHours) {
+                        return false; // Less than 24 hours passed, don't show
+                    }
+                }
+                return true;
+            }
+
+            // Function to load and display popups
+            function displayPopups() {
+                const popups = JSON.parse(localStorage.getItem('popups')) || [];
+                const now = new Date();
+                now.setHours(0, 0, 0, 0); // Normalize to start of day for comparison
+
+                const validPopups = popups.filter(popup => {
+                    if (!popup.active) return false;
+
+                    const startDate = new Date(popup.startDate);
+                    startDate.setHours(0, 0, 0, 0);
+                    const endDate = new Date(popup.endDate);
+                    endDate.setHours(23, 59, 59, 999); // Normalize to end of day for comparison
+
+                    return now >= startDate && now <= endDate;
+                });
+
+                if (validPopups.length > 0) {
+                    // For simplicity, display the first valid active popup. 
+                    // You might want to implement a more complex logic for multiple popups (e.g., carousel).
+                    const popupToShow = validPopups[0]; 
+
+                    if (shouldShowPopup(popupToShow.id)) {
+                        popupDisplayTitle.textContent = popupToShow.title;
+                        popupDisplayContent.textContent = popupToShow.content;
+
+                        if (popupToShow.image) {
+                            popupDisplayImage.src = popupToShow.image;
+                            popupDisplayImage.alt = popupToShow.title;
+                            popupDisplayImageContainer.classList.remove('hidden');
+                        } else {
+                            popupDisplayImageContainer.classList.add('hidden');
+                        }
+
+                        if (popupToShow.link) {
+                            popupDisplayLink.href = popupToShow.link;
+                        } else {
+                            popupDisplayLink.href = '#'; // No link
+                        }
+                        
+                        mainPopup.style.display = 'flex'; // Show the modal
+
+                        // Event listeners for this specific popup
+                        closePopup.onclick = function() {
+                            if (doNotShowAgain.checked) {
+                                localStorage.setItem(`popup_${popupToShow.id}_closed`, Date.now());
+                            }
+                            mainPopup.style.display = 'none';
+                            doNotShowAgain.checked = false; // Reset checkbox
+                        };
+                    }
+                }
+            }
+
+            displayPopups();
+        });
+    </script>
+
     <InstagramFeed userId="https://www.instagram.com/shtown_official/" accessToken="ACCESS_TOKEN" />
+
+    <!-- Popup Modal Structure -->
+    <div id="mainPopup" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-[100] hidden">
+      <div class="bg-white rounded-lg shadow-xl max-w-sm w-full p-6 relative">
+        <button id="closePopup" class="absolute top-3 right-3 text-gray-500 hover:text-gray-700 text-2xl font-bold">&times;</button>
+        <h3 id="popupDisplayTitle" class="text-xl font-bold mb-4"></h3>
+        <div id="popupDisplayImageContainer" class="mb-4 hidden">
+          <a id="popupDisplayLink" href="#" target="_blank" rel="noopener noreferrer">
+            <img id="popupDisplayImage" src="" alt="팝업 이미지" class="w-full h-auto rounded">
+          </a>
+        </div>
+        <p id="popupDisplayContent" class="text-gray-700 mb-4"></p>
+        <div class="flex items-center mt-4">
+          <input type="checkbox" id="doNotShowAgain" class="form-checkbox h-4 w-4 text-primary rounded custom-checkbox">
+          <label for="doNotShowAgain" class="ml-2 text-sm text-gray-700">24시간 동안 다시 보지 않기</label>
+        </div>
+      </div>
+    </div>
 </body>
 </html>
