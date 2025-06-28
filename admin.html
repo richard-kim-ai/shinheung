@@ -165,6 +165,7 @@
           <td class="border p-2">${popup.end}</td>
           <td class="border p-2">
             <button class="text-blue-600 underline" onclick="editPopup(${idx})">수정</button>
+            <button class="text-red-600 underline ml-2" onclick="deletePopup(${idx})">삭제</button>
           </td>
         `;
         tbody.appendChild(tr);
@@ -220,6 +221,16 @@
       document.getElementById('editPopupModal').classList.add('hidden');
       alert('팝업이 수정되었습니다.');
     };
+
+    // 팝업 삭제 기능 추가
+    window.deletePopup = function(idx) {
+      if (!confirm('정말 이 팝업을 삭제하시겠습니까?')) return;
+      const list = JSON.parse(localStorage.getItem('popups') || '[]');
+      list.splice(idx, 1);
+      localStorage.setItem('popups', JSON.stringify(list));
+      renderPopupHistory();
+      alert('팝업이 삭제되었습니다.');
+    }
 
     // 최초 로딩 시 이력 표시
     renderPopupHistory();
