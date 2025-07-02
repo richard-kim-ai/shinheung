@@ -2,57 +2,30 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>신흥레저타운 관리자페이지</title>
+  <title>신흥레저타운 팝업 관리자</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>tailwind.config={theme:{extend:{colors:{primary:'#0088cc',secondary:'#f8b400'},borderRadius:{'button':'8px'}}}}</script>
+  <style>
+    body { font-family: 'Pretendard', 'Noto Sans KR', sans-serif; }
+    .custom-checkbox {
+      appearance: none; -webkit-appearance: none; width: 20px; height: 20px;
+      border: 2px solid #0088cc; border-radius: 4px; outline: none; cursor: pointer; position: relative;
+    }
+    .custom-checkbox:checked { background-color: #0088cc; }
+    .custom-checkbox:checked::after {
+      content: ''; position: absolute; top: 3px; left: 6px; width: 6px; height: 10px;
+      border: solid white; border-width: 0 2px 2px 0; transform: rotate(45deg);
+    }
+  </style>
 </head>
-<body class="bg-gray-100 min-h-screen">
-  <div class="max-w-3xl mx-auto py-10">
-    <h1 class="text-3xl font-bold text-center mb-8 text-primary">신흥레저타운 관리자페이지</h1>
-    <!-- SEO 메타데이터 -->
+<body class="bg-gray-50 min-h-screen">
+  <div class="max-w-2xl mx-auto py-10">
+    <h1 class="text-3xl font-bold text-center mb-8 text-primary font-['Pacifico']">팝업 관리 관리자</h1>
     <section class="bg-white rounded-lg shadow p-6 mb-8">
-      <h2 class="text-xl font-semibold mb-4">SEO 메타데이터</h2>
-      <form id="seoForm" class="space-y-4">
-        <div>
-          <label class="block font-medium mb-1">Title</label>
-          <input type="text" id="seoTitle" class="w-full border rounded px-3 py-2" required>
-        </div>
-        <div>
-          <label class="block font-medium mb-1">Description</label>
-          <textarea id="seoDescription" class="w-full border rounded px-3 py-2" required></textarea>
-        </div>
-        <div>
-          <label class="block font-medium mb-1">Keywords</label>
-          <input type="text" id="seoKeywords" class="w-full border rounded px-3 py-2">
-        </div>
-        <div>
-          <label class="block font-medium mb-1">OG Image URL</label>
-          <input type="url" id="seoOgImage" class="w-full border rounded px-3 py-2">
-        </div>
-        <button type="submit" class="bg-primary text-white px-6 py-2 rounded hover:bg-primary/90">저장</button>
-      </form>
-    </section>
-
-    <!-- 예약 링크 관리 -->
-    <section class="bg-white rounded-lg shadow p-6 mb-8">
-      <h2 class="text-xl font-semibold mb-4">예약 버튼 링크 관리</h2>
-      <form id="linkForm" class="space-y-4">
-        <div>
-          <label class="block font-medium mb-1">이용권 예약하기 링크</label>
-          <input type="url" id="ticketLink" class="w-full border rounded px-3 py-2" required>
-        </div>
-        <div>
-          <label class="block font-medium mb-1">카바나 예약하기 링크</label>
-          <input type="url" id="cabanaLink" class="w-full border rounded px-3 py-2" required>
-        </div>
-        <button type="submit" class="bg-primary text-white px-6 py-2 rounded hover:bg-primary/90">저장</button>
-      </form>
-    </section>
-
-    <!-- 팝업 관리 -->
-    <section class="bg-white rounded-lg shadow p-6 mb-8">
-      <h2 class="text-xl font-semibold mb-4">팝업 관리</h2>
+      <h2 class="text-xl font-semibold mb-4">팝업 생성</h2>
       <form id="popupForm" class="space-y-4 mb-6">
         <div>
           <label class="block font-medium mb-1">팝업 제목</label>
@@ -63,28 +36,42 @@
           <textarea id="popupContent" class="w-full border rounded px-3 py-2" required></textarea>
         </div>
         <div>
-          <label class="block font-medium mb-1">이미지 URL</label>
-          <input type="url" id="popupImage" class="w-full border rounded px-3 py-2">
+          <label class="block font-medium mb-1">팝업 이미지</label>
+          <input type="file" id="popupImage" accept="image/*" class="w-full border rounded px-3 py-2">
+          <div id="popupImagePreview" class="mt-2"></div>
         </div>
         <div>
-          <label class="block font-medium mb-1">게시일</label>
-          <input type="date" id="popupStart" class="border rounded px-3 py-2">
+          <label class="block font-medium mb-1">팝업 링크(선택)</label>
+          <input type="url" id="popupLink" class="w-full border rounded px-3 py-2" placeholder="https://">
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-1">
+            <label class="block font-medium mb-1">시작일</label>
+            <input type="date" id="popupStart" class="border rounded px-3 py-2 w-full" required>
+          </div>
+          <div class="flex-1">
+            <label class="block font-medium mb-1">종료일</label>
+            <input type="date" id="popupEnd" class="border rounded px-3 py-2 w-full" required>
+          </div>
         </div>
         <div>
-          <label class="block font-medium mb-1">종료일</label>
-          <input type="date" id="popupEnd" class="border rounded px-3 py-2">
+          <label class="inline-flex items-center">
+            <input type="checkbox" id="popupActive" class="custom-checkbox mr-2" checked>
+            <span class="text-sm">활성화</span>
+          </label>
         </div>
-        <button type="submit" class="bg-primary text-white px-6 py-2 rounded hover:bg-primary/90">팝업 등록</button>
+        <button type="submit" class="bg-primary text-white px-6 py-2 rounded-button hover:bg-primary/90">팝업 등록</button>
       </form>
       <div>
-        <h3 class="text-lg font-semibold mb-2">팝업 이력</h3>
+        <h3 class="text-lg font-semibold mb-2">팝업 리스트</h3>
         <table class="w-full text-sm border">
           <thead>
             <tr class="bg-gray-100">
               <th class="p-2 border">제목</th>
-              <th class="p-2 border">게시일</th>
+              <th class="p-2 border">시작일</th>
               <th class="p-2 border">종료일</th>
-              <th class="p-2 border">수정</th>
+              <th class="p-2 border">활성</th>
+              <th class="p-2 border">수정/삭제</th>
             </tr>
           </thead>
           <tbody id="popupHistory"></tbody>
@@ -108,131 +95,210 @@
           <textarea id="editPopupContent" class="w-full border rounded px-3 py-2" required></textarea>
         </div>
         <div>
-          <label class="block font-medium mb-1">이미지 URL</label>
-          <input type="url" id="editPopupImage" class="w-full border rounded px-3 py-2">
+          <label class="block font-medium mb-1">팝업 이미지</label>
+          <input type="file" id="editPopupImage" accept="image/*" class="w-full border rounded px-3 py-2">
+          <div id="editPopupImagePreview" class="mt-2"></div>
         </div>
         <div>
-          <label class="block font-medium mb-1">게시일</label>
-          <input type="date" id="editPopupStart" class="border rounded px-3 py-2">
+          <label class="block font-medium mb-1">팝업 링크(선택)</label>
+          <input type="url" id="editPopupLink" class="w-full border rounded px-3 py-2" placeholder="https://">
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-1">
+            <label class="block font-medium mb-1">시작일</label>
+            <input type="date" id="editPopupStart" class="border rounded px-3 py-2 w-full" required>
+          </div>
+          <div class="flex-1">
+            <label class="block font-medium mb-1">종료일</label>
+            <input type="date" id="editPopupEnd" class="border rounded px-3 py-2 w-full" required>
+          </div>
         </div>
         <div>
-          <label class="block font-medium mb-1">종료일</label>
-          <input type="date" id="editPopupEnd" class="border rounded px-3 py-2">
+          <label class="inline-flex items-center">
+            <input type="checkbox" id="editPopupActive" class="custom-checkbox mr-2">
+            <span class="text-sm">활성화</span>
+          </label>
         </div>
         <div class="flex justify-end gap-2">
           <button type="button" id="closeEditPopup" class="px-4 py-2 rounded bg-gray-200 hover:bg-gray-300">취소</button>
-          <button type="submit" class="bg-primary text-white px-6 py-2 rounded hover:bg-primary/90">저장</button>
+          <button type="submit" class="bg-primary text-white px-6 py-2 rounded-button hover:bg-primary/90">저장</button>
         </div>
       </form>
     </div>
   </div>
 
+  <!-- 팝업 미리보기 모달 -->
+  <div id="previewPopupModal" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-lg shadow-xl max-w-sm w-full p-6 relative">
+      <button id="closePreviewPopup" class="absolute top-3 right-3 text-gray-500 hover:text-gray-700 text-2xl font-bold">&times;</button>
+      <h3 id="previewPopupTitle" class="text-xl font-bold mb-4"></h3>
+      <div id="previewPopupImageContainer" class="mb-4 hidden">
+        <a id="previewPopupLink" href="#" target="_blank" rel="noopener noreferrer">
+          <img id="previewPopupImage" src="" alt="팝업 이미지" class="w-full h-auto rounded">
+        </a>
+      </div>
+      <p id="previewPopupContent" class="text-gray-700 mb-4"></p>
+      <div class="flex items-center mt-4">
+        <input type="checkbox" id="previewDoNotShowAgain" class="form-checkbox h-4 w-4 text-primary rounded custom-checkbox">
+        <label for="previewDoNotShowAgain" class="ml-2 text-sm text-gray-700">1일간 다시 보지 않기(미리보기용)</label>
+      </div>
+      <div class="mt-2 text-xs text-gray-400">※ 실제 팝업에서는 닫기/1일간 보지 않기 버튼이 자동 생성됩니다.</div>
+    </div>
+  </div>
+
   <script>
-    // SEO 메타데이터 저장 (localStorage 예시)
-    document.getElementById('seoForm').onsubmit = function(e) {
-      e.preventDefault();
-      const data = {
-        title: seoTitle.value,
-        description: seoDescription.value,
-        keywords: seoKeywords.value,
-        ogImage: seoOgImage.value
-      };
-      localStorage.setItem('seoMeta', JSON.stringify(data));
-      alert('SEO 메타데이터가 저장되었습니다.');
-    };
-
-    // 예약 링크 저장
-    document.getElementById('linkForm').onsubmit = function(e) {
-      e.preventDefault();
-      const data = {
-        ticket: ticketLink.value,
-        cabana: cabanaLink.value
-      };
-      localStorage.setItem('links', JSON.stringify(data));
-      alert('예약 링크가 저장되었습니다.');
-    };
-
-    // 팝업 관리
+    // 팝업 데이터 구조: {id, title, content, image, link, startDate, endDate, active}
+    function getPopups() {
+      return JSON.parse(localStorage.getItem('popups') || '[]');
+    }
+    function savePopups(list) {
+      localStorage.setItem('popups', JSON.stringify(list));
+    }
     function renderPopupHistory() {
-      const list = JSON.parse(localStorage.getItem('popups') || '[]');
+      const list = getPopups();
       const tbody = document.getElementById('popupHistory');
       tbody.innerHTML = '';
       list.forEach((popup, idx) => {
         const tr = document.createElement('tr');
         tr.innerHTML = `
           <td class="border p-2">${popup.title}</td>
-          <td class="border p-2">${popup.start}</td>
-          <td class="border p-2">${popup.end}</td>
-          <td class="border p-2">
+          <td class="border p-2">${popup.startDate}</td>
+          <td class="border p-2">${popup.endDate}</td>
+          <td class="border p-2 text-center">${popup.active ? 'O' : 'X'}</td>
+          <td class="border p-2 flex gap-2 justify-center">
             <button class="text-blue-600 underline" onclick="editPopup(${idx})">수정</button>
-            <button class="text-red-600 underline ml-2" onclick="deletePopup(${idx})">삭제</button>
+            <button class="text-red-600 underline" onclick="deletePopup(${idx})">삭제</button>
+            <button class="text-green-600 underline" onclick="previewPopup(${idx})">미리보기</button>
           </td>
         `;
         tbody.appendChild(tr);
       });
     }
-
+    // 이미지 업로드 미리보기
+    document.getElementById('popupImage').onchange = function(e) {
+      const file = e.target.files[0];
+      const preview = document.getElementById('popupImagePreview');
+      preview.innerHTML = '';
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(ev) {
+          preview.innerHTML = `<img src="${ev.target.result}" alt="미리보기" class="max-h-32 rounded">`;
+          preview.dataset.base64 = ev.target.result;
+        };
+        reader.readAsDataURL(file);
+      } else {
+        preview.dataset.base64 = '';
+      }
+    };
+    // 팝업 등록
     document.getElementById('popupForm').onsubmit = function(e) {
       e.preventDefault();
-      const list = JSON.parse(localStorage.getItem('popups') || '[]');
+      const list = getPopups();
+      const id = Date.now();
+      const imageBase64 = document.getElementById('popupImagePreview').dataset.base64 || '';
       list.push({
+        id,
         title: popupTitle.value,
         content: popupContent.value,
-        image: popupImage.value,
-        start: popupStart.value,
-        end: popupEnd.value
+        image: imageBase64,
+        link: popupLink.value,
+        startDate: popupStart.value,
+        endDate: popupEnd.value,
+        active: popupActive.checked
       });
-      localStorage.setItem('popups', JSON.stringify(list));
+      savePopups(list);
       renderPopupHistory();
       popupForm.reset();
+      document.getElementById('popupImagePreview').innerHTML = '';
+      document.getElementById('popupImagePreview').dataset.base64 = '';
       alert('팝업이 등록되었습니다.');
     };
-
     // 팝업 수정
     window.editPopup = function(idx) {
-      const list = JSON.parse(localStorage.getItem('popups') || '[]');
+      const list = getPopups();
       const popup = list[idx];
       document.getElementById('editPopupId').value = idx;
       document.getElementById('editPopupTitle').value = popup.title;
       document.getElementById('editPopupContent').value = popup.content;
-      document.getElementById('editPopupImage').value = popup.image;
-      document.getElementById('editPopupStart').value = popup.start;
-      document.getElementById('editPopupEnd').value = popup.end;
+      document.getElementById('editPopupLink').value = popup.link || '';
+      document.getElementById('editPopupStart').value = popup.startDate;
+      document.getElementById('editPopupEnd').value = popup.endDate;
+      document.getElementById('editPopupActive').checked = popup.active;
+      // 이미지 미리보기
+      const preview = document.getElementById('editPopupImagePreview');
+      preview.innerHTML = popup.image ? `<img src="${popup.image}" alt="미리보기" class="max-h-32 rounded">` : '';
+      preview.dataset.base64 = popup.image || '';
       document.getElementById('editPopupModal').classList.remove('hidden');
     };
-
     document.getElementById('closeEditPopup').onclick = function() {
       document.getElementById('editPopupModal').classList.add('hidden');
     };
-
+    document.getElementById('editPopupImage').onchange = function(e) {
+      const file = e.target.files[0];
+      const preview = document.getElementById('editPopupImagePreview');
+      preview.innerHTML = '';
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(ev) {
+          preview.innerHTML = `<img src="${ev.target.result}" alt="미리보기" class="max-h-32 rounded">`;
+          preview.dataset.base64 = ev.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+    };
     document.getElementById('editPopupForm').onsubmit = function(e) {
       e.preventDefault();
       const idx = document.getElementById('editPopupId').value;
-      const list = JSON.parse(localStorage.getItem('popups') || '[]');
+      const list = getPopups();
       list[idx] = {
+        ...list[idx],
         title: editPopupTitle.value,
         content: editPopupContent.value,
-        image: editPopupImage.value,
-        start: editPopupStart.value,
-        end: editPopupEnd.value
+        image: document.getElementById('editPopupImagePreview').dataset.base64 || '',
+        link: editPopupLink.value,
+        startDate: editPopupStart.value,
+        endDate: editPopupEnd.value,
+        active: editPopupActive.checked
       };
-      localStorage.setItem('popups', JSON.stringify(list));
+      savePopups(list);
       renderPopupHistory();
       document.getElementById('editPopupModal').classList.add('hidden');
       alert('팝업이 수정되었습니다.');
     };
-
-    // 팝업 삭제 기능 추가
+    // 팝업 삭제
     window.deletePopup = function(idx) {
       if (!confirm('정말 이 팝업을 삭제하시겠습니까?')) return;
-      const list = JSON.parse(localStorage.getItem('popups') || '[]');
+      const list = getPopups();
       list.splice(idx, 1);
-      localStorage.setItem('popups', JSON.stringify(list));
+      savePopups(list);
       renderPopupHistory();
       alert('팝업이 삭제되었습니다.');
     }
-
-    // 최초 로딩 시 이력 표시
+    // 팝업 미리보기
+    window.previewPopup = function(idx) {
+      const list = getPopups();
+      const popup = list[idx];
+      document.getElementById('previewPopupTitle').textContent = popup.title;
+      document.getElementById('previewPopupContent').textContent = popup.content;
+      if (popup.image) {
+        document.getElementById('previewPopupImage').src = popup.image;
+        document.getElementById('previewPopupImage').alt = popup.title;
+        document.getElementById('previewPopupImageContainer').classList.remove('hidden');
+      } else {
+        document.getElementById('previewPopupImageContainer').classList.add('hidden');
+      }
+      if (popup.link) {
+        document.getElementById('previewPopupLink').href = popup.link;
+      } else {
+        document.getElementById('previewPopupLink').href = '#';
+      }
+      document.getElementById('previewDoNotShowAgain').checked = false;
+      document.getElementById('previewPopupModal').classList.remove('hidden');
+    }
+    document.getElementById('closePreviewPopup').onclick = function() {
+      document.getElementById('previewPopupModal').classList.add('hidden');
+    };
+    // 최초 로딩 시 리스트 표시
     renderPopupHistory();
   </script>
 </body>
