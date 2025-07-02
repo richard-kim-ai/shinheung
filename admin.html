@@ -36,8 +36,8 @@
           <textarea id="popupContent" class="w-full border rounded px-3 py-2" required></textarea>
         </div>
         <div>
-          <label class="block font-medium mb-1">팝업 이미지</label>
-          <input type="file" id="popupImage" accept="image/*" class="w-full border rounded px-3 py-2">
+          <label class="block font-medium mb-1">팝업 이미지 URL</label>
+          <input type="url" id="popupImageUrl" class="w-full border rounded px-3 py-2" placeholder="http://신흥레저.com/html/파일명.jpg">
           <div id="popupImagePreview" class="mt-2"></div>
         </div>
         <div>
@@ -95,8 +95,8 @@
           <textarea id="editPopupContent" class="w-full border rounded px-3 py-2" required></textarea>
         </div>
         <div>
-          <label class="block font-medium mb-1">팝업 이미지</label>
-          <input type="file" id="editPopupImage" accept="image/*" class="w-full border rounded px-3 py-2">
+          <label class="block font-medium mb-1">팝업 이미지 URL</label>
+          <input type="url" id="editPopupImageUrl" class="w-full border rounded px-3 py-2" placeholder="http://신흥레저.com/html/파일명.jpg">
           <div id="editPopupImagePreview" class="mt-2"></div>
         </div>
         <div>
@@ -174,33 +174,27 @@
         tbody.appendChild(tr);
       });
     }
-    // 이미지 업로드 미리보기
-    document.getElementById('popupImage').onchange = function(e) {
-      const file = e.target.files[0];
+    // 이미지 URL 입력 시 미리보기
+    document.getElementById('popupImageUrl').addEventListener('input', function(e) {
+      const url = e.target.value;
       const preview = document.getElementById('popupImagePreview');
-      preview.innerHTML = '';
-      if (file) {
-        const reader = new FileReader();
-        reader.onload = function(ev) {
-          preview.innerHTML = `<img src="${ev.target.result}" alt="미리보기" class="max-h-32 rounded">`;
-          preview.dataset.base64 = ev.target.result;
-        };
-        reader.readAsDataURL(file);
+      if (url) {
+        preview.innerHTML = `<img src="${url}" alt="미리보기" class="max-h-32 rounded">`;
       } else {
-        preview.dataset.base64 = '';
+        preview.innerHTML = '';
       }
-    };
+    });
     // 팝업 등록
     document.getElementById('popupForm').onsubmit = function(e) {
       e.preventDefault();
       const list = getPopups();
       const id = Date.now();
-      const imageBase64 = document.getElementById('popupImagePreview').dataset.base64 || '';
+      const imageUrl = document.getElementById('popupImageUrl').value;
       list.push({
         id,
         title: popupTitle.value,
         content: popupContent.value,
-        image: imageBase64,
+        image: imageUrl,
         link: popupLink.value,
         startDate: popupStart.value,
         endDate: popupEnd.value,
@@ -210,7 +204,6 @@
       renderPopupHistory();
       popupForm.reset();
       document.getElementById('popupImagePreview').innerHTML = '';
-      document.getElementById('popupImagePreview').dataset.base64 = '';
       alert('팝업이 등록되었습니다.');
     };
     // 팝업 수정
@@ -220,32 +213,32 @@
       document.getElementById('editPopupId').value = idx;
       document.getElementById('editPopupTitle').value = popup.title;
       document.getElementById('editPopupContent').value = popup.content;
+      document.getElementById('editPopupImageUrl').value = popup.image || '';
       document.getElementById('editPopupLink').value = popup.link || '';
       document.getElementById('editPopupStart').value = popup.startDate;
       document.getElementById('editPopupEnd').value = popup.endDate;
       document.getElementById('editPopupActive').checked = popup.active;
       // 이미지 미리보기
       const preview = document.getElementById('editPopupImagePreview');
-      preview.innerHTML = popup.image ? `<img src="${popup.image}" alt="미리보기" class="max-h-32 rounded">` : '';
-      preview.dataset.base64 = popup.image || '';
+      if (popup.image) {
+        preview.innerHTML = `<img src="${popup.image}" alt="미리보기" class="max-h-32 rounded">`;
+      } else {
+        preview.innerHTML = '';
+      }
       document.getElementById('editPopupModal').classList.remove('hidden');
     };
     document.getElementById('closeEditPopup').onclick = function() {
       document.getElementById('editPopupModal').classList.add('hidden');
     };
-    document.getElementById('editPopupImage').onchange = function(e) {
-      const file = e.target.files[0];
+    document.getElementById('editPopupImageUrl').addEventListener('input', function(e) {
+      const url = e.target.value;
       const preview = document.getElementById('editPopupImagePreview');
-      preview.innerHTML = '';
-      if (file) {
-        const reader = new FileReader();
-        reader.onload = function(ev) {
-          preview.innerHTML = `<img src="${ev.target.result}" alt="미리보기" class="max-h-32 rounded">`;
-          preview.dataset.base64 = ev.target.result;
-        };
-        reader.readAsDataURL(file);
+      if (url) {
+        preview.innerHTML = `<img src="${url}" alt="미리보기" class="max-h-32 rounded">`;
+      } else {
+        preview.innerHTML = '';
       }
-    };
+    });
     document.getElementById('editPopupForm').onsubmit = function(e) {
       e.preventDefault();
       const idx = document.getElementById('editPopupId').value;
@@ -254,7 +247,7 @@
         ...list[idx],
         title: editPopupTitle.value,
         content: editPopupContent.value,
-        image: document.getElementById('editPopupImagePreview').dataset.base64 || '',
+        image: document.getElementById('editPopupImageUrl').value,
         link: editPopupLink.value,
         startDate: editPopupStart.value,
         endDate: editPopupEnd.value,
