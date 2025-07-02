@@ -14,14 +14,14 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="신흥레저타운 - 자연 속에서 즐기는 사계절 레저">
     <meta property="og:description" content="경기도 양주시 신흥레저타운, 사계절 수영장, 카바나, 불멍장, 가족과 함께하는 자연 속 레저, 온라인 예매 할인, 편리한 예약, 다양한 부대시설 안내">
-    <meta property="og:image" content="https://신흥레저.com/og-image.jpg">
+    <meta property="og:image" content="https://richard-kim-ai.github.io/shinheung/main.jpg">
     <meta property="og:url" content="https://신흥레저.com/">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="신흥레저타운 - 자연 속에서 즐기는 사계절 레저">
     <meta name="twitter:description" content="경기도 양주시 신흥레저타운, 사계절 수영장, 카바나, 불멍장, 가족과 함께하는 자연 속 레저, 온라인 예매 할인, 편리한 예약, 다양한 부대시설 안내">
-    <meta name="twitter:image" content="https://신흥레저.com/og-image.jpg">
+    <meta name="twitter:image" content="https://richard-kim-ai.github.io/shinheung/main.jpg">
 
     <!-- 파비콘 -->
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -390,7 +390,7 @@
       <!-- 반응형 이미지 롤링 슬라이더 (PC: 3개, 모바일: 1개) -->
       <div class="w-full flex justify-center mb-6">
         <div class="relative w-full max-w-[944px] h-[300px] overflow-hidden rounded-lg" id="poolNoticeSlider">
-          <div class="flex transition-transform duration-500 gap-4" style="width:2264px;" id="poolNoticeTrack">
+          <div class="flex transition-transform duration-500 gap-0 md:gap-4" style="width:2100px;" id="poolNoticeTrack">
             <img src="http://richard-kim-ai.github.io/shinheung/s1-3.png" alt="수영장 주의1" class="w-[300px] h-[300px] object-cover rounded-lg flex-shrink-0">
             <img src="http://richard-kim-ai.github.io/shinheung/s1-4.png" alt="수영장 주의2" class="w-[300px] h-[300px] object-cover rounded-lg flex-shrink-0">
             <img src="http://richard-kim-ai.github.io/shinheung/s1-5.png" alt="수영장 주의3" class="w-[300px] h-[300px] object-cover rounded-lg flex-shrink-0">
@@ -425,7 +425,7 @@
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-12">문의하기</h2>
             <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <a href="https://pf.kakao.com/_SxeYGb/chat" target="_blank"
+                <a href="http://pf.kakao.com/_IxgmAG/chat" target="_blank"
                     class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-4 px-8 rounded-full text-xl shadow-lg flex items-center justify-center">
                     <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/kakaotalk.svg" alt="카카오톡" style="width:32px; height:32px; margin-right:12px;">
                     카카오톡 채널로 문의하기
@@ -489,6 +489,9 @@
     <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-4 items-end">
       <a href="#pricing" aria-label="입장권 예약하기" class="flex items-center justify-center bg-primary hover:bg-primary/90 text-white w-14 h-14 rounded-full shadow-lg focus:ring-2 focus:ring-primary/50 cursor-pointer" title="입장권 예약하기">
         <i class="ri-ticket-line ri-lg"></i>
+      </a>
+      <a href="#cabana" aria-label="카바나 안내로 바로가기" class="flex items-center justify-center bg-yellow-400 hover:bg-yellow-500 text-black w-14 h-14 rounded-full shadow-lg focus:ring-2 focus:ring-yellow-300 cursor-pointer" title="카바나 안내">
+        <i class="ri-home-8-line ri-lg"></i>
       </a>
     </div>
 
@@ -651,106 +654,45 @@
         });
     </script>
 
-    <script id="popupDisplayScript">
-        document.addEventListener('DOMContentLoaded', function() {
-            const mainPopup = document.getElementById('mainPopup');
-            const closePopup = document.getElementById('closePopup');
-            const doNotShowAgain = document.getElementById('doNotShowAgain');
-            const popupDisplayTitle = document.getElementById('popupDisplayTitle');
-            const popupDisplayContent = document.getElementById('popupDisplayContent');
-            const popupDisplayImage = document.getElementById('popupDisplayImage');
-            const popupDisplayLink = document.getElementById('popupDisplayLink');
-            const popupDisplayImageContainer = document.getElementById('popupDisplayImageContainer');
-
-            // Function to check if the popup should be displayed
-            function shouldShowPopup(popupId) {
-                const lastClosedTime = localStorage.getItem(`popup_${popupId}_closed`);
-                if (lastClosedTime) {
-                    const twentyFourHours = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
-                    if (Date.now() - parseInt(lastClosedTime) < twentyFourHours) {
-                        return false; // Less than 24 hours passed, don't show
-                    }
-                }
-                return true;
-            }
-
-            // Function to load and display popups
-            function displayPopups() {
-                const popups = JSON.parse(localStorage.getItem('popups')) || [];
-                const now = new Date();
-                now.setHours(0, 0, 0, 0); // Normalize to start of day for comparison
-
-                const validPopups = popups.filter(popup => {
-                    if (!popup.active) return false;
-
-                    const startDate = new Date(popup.startDate);
-                    startDate.setHours(0, 0, 0, 0);
-                    const endDate = new Date(popup.endDate);
-                    endDate.setHours(23, 59, 59, 999); // Normalize to end of day for comparison
-
-                    return now >= startDate && now <= endDate;
-                });
-
-                if (validPopups.length > 0) {
-                    // For simplicity, display the first valid active popup. 
-                    // You might want to implement a more complex logic for multiple popups (e.g., carousel).
-                    const popupToShow = validPopups[0]; 
-
-                    if (shouldShowPopup(popupToShow.id)) {
-                        popupDisplayTitle.textContent = popupToShow.title;
-                        popupDisplayContent.textContent = popupToShow.content;
-
-                        if (popupToShow.image) {
-                            popupDisplayImage.src = popupToShow.image;
-                            popupDisplayImage.alt = popupToShow.title;
-                            popupDisplayImageContainer.classList.remove('hidden');
-                        } else {
-                            popupDisplayImageContainer.classList.add('hidden');
-                        }
-
-                        if (popupToShow.link) {
-                            popupDisplayLink.href = popupToShow.link;
-                        } else {
-                            popupDisplayLink.href = '#'; // No link
-                        }
-                        
-                        mainPopup.style.display = 'flex'; // Show the modal
-
-                        // Event listeners for this specific popup
-                        closePopup.onclick = function() {
-                            if (doNotShowAgain.checked) {
-                                localStorage.setItem(`popup_${popupToShow.id}_closed`, Date.now());
-                            }
-                            mainPopup.style.display = 'none';
-                            doNotShowAgain.checked = false; // Reset checkbox
-                        };
-                    }
-                }
-            }
-
-            displayPopups();
-        });
+    <!-- 즉시 노출 팝업 스크립트 및 구조 추가 -->
+    <script id="instantPopupScript">
+    document.addEventListener('DOMContentLoaded', function() {
+      // 팝업이 24시간 동안 안보이기 체크되어 있으면 return
+      const popupId = 'instantPopup202407';
+      const lastClosedTime = localStorage.getItem(`popup_${popupId}_closed`);
+      if (lastClosedTime) {
+        const twentyFourHours = 24 * 60 * 60 * 1000;
+        if (Date.now() - parseInt(lastClosedTime) < twentyFourHours) {
+          return;
+        }
+      }
+      // 팝업 DOM 생성
+      const popupHtml = `
+        <div id="mainPopup" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-[100]" style="z-index:99999;">
+          <div class="bg-white rounded-lg shadow-xl max-w-sm w-full p-6 relative flex flex-col items-center">
+            <button id="closePopup" class="absolute top-3 right-3 text-gray-500 hover:text-gray-700 text-2xl font-bold">&times;</button>
+            <img src="https://github.com/richard-kim-ai/shinheung/blob/main/popup1.png?raw=true" alt="팝업 이미지" class="w-full h-auto rounded mb-4">
+            <div class="flex items-center mt-4">
+              <input type="checkbox" id="doNotShowAgain" class="form-checkbox h-4 w-4 text-primary rounded custom-checkbox">
+              <label for="doNotShowAgain" class="ml-2 text-sm text-gray-700">24시간 동안 다시 보지 않기</label>
+            </div>
+          </div>
+        </div>
+      `;
+      document.body.insertAdjacentHTML('beforeend', popupHtml);
+      document.body.style.overflow = 'hidden';
+      // 닫기 버튼 이벤트
+      document.getElementById('closePopup').onclick = function() {
+        if (document.getElementById('doNotShowAgain').checked) {
+          localStorage.setItem(`popup_${popupId}_closed`, Date.now());
+        }
+        document.getElementById('mainPopup').remove();
+        document.body.style.overflow = '';
+      };
+    });
     </script>
 
     <InstagramFeed userId="https://www.instagram.com/shtown_official/" accessToken="ACCESS_TOKEN" />
-
-    <!-- Popup Modal Structure -->
-    <div id="mainPopup" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-[100] hidden">
-      <div class="bg-white rounded-lg shadow-xl max-w-sm w-full p-6 relative">
-        <button id="closePopup" class="absolute top-3 right-3 text-gray-500 hover:text-gray-700 text-2xl font-bold">&times;</button>
-        <h3 id="popupDisplayTitle" class="text-xl font-bold mb-4"></h3>
-        <div id="popupDisplayImageContainer" class="mb-4 hidden">
-          <a id="popupDisplayLink" href="#" target="_blank" rel="noopener noreferrer">
-            <img id="popupDisplayImage" src="" alt="팝업 이미지" class="w-full h-auto rounded">
-          </a>
-        </div>
-        <p id="popupDisplayContent" class="text-gray-700 mb-4"></p>
-        <div class="flex items-center mt-4">
-          <input type="checkbox" id="doNotShowAgain" class="form-checkbox h-4 w-4 text-primary rounded custom-checkbox">
-          <label for="doNotShowAgain" class="ml-2 text-sm text-gray-700">24시간 동안 다시 보지 않기</label>
-        </div>
-      </div>
-    </div>
 
     <script>
       // 반응형 수영장 이용시 주의사항 이미지 슬라이더 (PC: 3개, 모바일: 1개)
@@ -765,13 +707,16 @@
         }
         function updateSlider() {
           const slidesToShow = getSlidesToShow();
-          // PC: 3개(300*3+8*2=944), 모바일: 1개(300)
           const slideWidth = 300;
-          const gap = window.innerWidth < 768 ? 0 : 16; // gap-4 = 1rem = 16px
+          const gap = slidesToShow === 1 ? 0 : 16; // 모바일은 gap 0, PC는 16px
           const maxWidth = slidesToShow === 1 ? slideWidth : (slideWidth * slidesToShow + gap * (slidesToShow - 1));
           track.parentElement.style.maxWidth = maxWidth + 'px';
-          // idx * (slideWidth + gap) 만큼 이동
-          track.style.transform = `translateX(-${idx * (slideWidth + gap)}px)`;
+          // 모바일은 gap 없이, PC는 gap 포함해서 transform
+          if (slidesToShow === 1) {
+            track.style.transform = `translateX(-${idx * slideWidth}px)`;
+          } else {
+            track.style.transform = `translateX(-${idx * (slideWidth + gap)}px)`;
+          }
         }
         prev.onclick = function() {
           const slidesToShow = getSlidesToShow();
