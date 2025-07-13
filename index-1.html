@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO 기본 메타데이터 -->
+    <title>신흥레저타운 - 자연 속에서 즐기는 사계절 레저</title>
+    <meta name="description" content="경기도 양주시 신흥레저타운, 사계절 수영장, 카바나, 불멍장, 가족과 함께하는 자연 속 레저, 온라인 예매 할인, 편리한 예약, 다양한 부대시설 안내">
+    <meta name="keywords" content="신흥레저타운, 양주시, 수영장, 카바나, 불멍장, 워터파크, 가족여행, 캠핑, 예약, 할인, 경기도, 피크닉, 야외수영장">
+    <meta name="author" content="신흥레저타운">
+
+    <!-- Open Graph (SNS 공유 최적화) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="신흥레저타운 - 자연 속에서 즐기는 사계절 레저">
+    <meta property="og:description" content="경기도 양주시 신흥레저타운, 사계절 수영장, 카바나, 불멍장, 가족과 함께하는 자연 속 레저, 온라인 예매 할인, 편리한 예약, 다양한 부대시설 안내">
+    <meta property="og:image" content="https://richard-kim-ai.github.io/shinheung/main.jpg">
+    <meta property="og:url" content="https://신흥레저.com/">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="신흥레저타운 - 자연 속에서 즐기는 사계절 레저">
+    <meta name="twitter:description" content="경기도 양주시 신흥레저타운, 사계절 수영장, 카바나, 불멍장, 가족과 함께하는 자연 속 레저, 온라인 예매 할인, 편리한 예약, 다양한 부대시설 안내">
+    <meta name="twitter:image" content="https://richard-kim-ai.github.io/shinheung/main.jpg">
+
+    <!-- 파비콘 -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#0088cc',secondary:'#f8b400'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        
+        body {
+            font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .hero-section {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+            url('https://richard-kim-ai.github.io/shinheung/main.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        
+        .custom-checkbox {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #0088cc;
+            border-radius: 4px;
+            outline: none;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .custom-checkbox:checked {
+            background-color: #0088cc;
+        }
+        
+        .custom-checkbox:checked::after {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 6px;
+            width: 6px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+        
+        /* SNS 아이콘 우측 상단 고정 및 크기/색상 커스텀 */
+        .hero-sns-icons {
+            position: absolute;
+            top: 4rem;
+            right: 2.5rem;
+            display: flex;
+            gap: 1.5rem;
+            z-index: 10;
+        }
+        @media (max-width: 768px) {
+            .hero-sns-icons {
+                top: 1.5rem;
+                right: 1rem;
+                gap: 1rem;
+            }
+        }
+        .sns-icon {
+            width: 60px;
+            height: 60px;
+            min-width: 60px;
+            min-height: 60px;
+            max-width: 60px;
+            max-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.85);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+            transition: transform 0.2s, box-shadow 0.2s;
+            font-size: 2.6rem;
+        }
+        .sns-icon:hover {
+            transform: scale(1.12);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+        }
+        .sns-icon--insta svg {
+            width: 38px;
+            height: 38px;
+            display: block;
+        }
+        .sns-icon--blog i {
+            color: #03c75a;
+        }
+    </style>
+</head>
+<body id="top" class="bg-gray-50">
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-['Pacifico'] text-primary">신흥레저타운</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#top" class="text-gray-700 hover:text-primary font-medium">홈</a>
+                <a href="#pricing" class="text-gray-700 hover:text-primary font-medium">요금안내</a>
+                <a href="#cabana" class="text-gray-700 hover:text-primary font-medium">카바나</a>
+                <a href="#guide" class="text-gray-700 hover:text-primary font-medium">이용안내</a>
+                <a href="#contact" class="text-gray-700 hover:text-primary font-medium">문의</a>
+            </nav>
+            
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-button" class="w-10 h-10 flex items-center justify-center text-gray-700">
+                    <i class="ri-menu-line ri-lg"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-white w-full border-t">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+                <a href="#top" class="text-gray-700 hover:text-primary font-medium py-2">홈</a>
+                <a href="#pricing" class="text-gray-700 hover:text-primary font-medium py-2">요금안내</a>
+                <a href="#cabana" class="text-gray-700 hover:text-primary font-medium py-2">카바나</a>
+                <a href="#guide" class="text-gray-700 hover:text-primary font-medium py-2">이용안내</a>
+                <a href="#contact" class="text-gray-700 hover:text-primary font-medium py-2">문의</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-section h-screen flex items-center justify-center text-white pt-16 relative">
+        <div class="hero-sns-icons">
+          <a href="https://www.instagram.com/shtown_official" target="_blank" rel="noopener" aria-label="인스타그램" class="sns-icon sns-icon--insta">
+            <svg viewBox="0 0 448 448" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <radialGradient id="ig-gradient" cx="30%" cy="107%" r="150%" fx="30%" fy="107%">
+                  <stop offset="0%" stop-color="#fdf497"/>
+                  <stop offset="5%" stop-color="#fdf497"/>
+                  <stop offset="45%" stop-color="#fd5949"/>
+                  <stop offset="60%" stop-color="#d6249f"/>
+                  <stop offset="90%" stop-color="#285AEB"/>
+                </radialGradient>
+              </defs>
+              <rect x="0" y="0" width="448" height="448" rx="110" fill="url(#ig-gradient)"/>
+              <path d="M224 144c-44.2 0-80 35.8-80 80s35.8 80 80 80 80-35.8 80-80-35.8-80-80-80zm0 132c-28.7 0-52-23.3-52-52s23.3-52 52-52 52 23.3 52 52-23.3 52-52 52zm85-136c0 10.5-8.5 19-19 19s-19-8.5-19-19 8.5-19 19-19 19 8.5 19 19zm49 19.2c-1.1-23.6-6.4-44.5-23.4-61.5S347.6 49.1 324 48c-23.6-1.1-94.4-1.1-118 0-23.6 1.1-44.5 6.4-61.5 23.4S49.1 100.4 48 124c-1.1 23.6-1.1 94.4 0 118 1.1 23.6 6.4 44.5 23.4 61.5s37.9 22.3 61.5 23.4c23.6 1.1 94.4 1.1 118 0 23.6-1.1 44.5-6.4 61.5-23.4s22.3-37.9 23.4-61.5c1.1-23.6 1.1-94.4 0-118zm-36.2 143.2c-7.8 19.6-22.9 34.7-42.5 42.5-29.4 11.7-99.2 9-132.6 0-19.6-7.8-34.7-22.9-42.5-42.5-11.7-29.4-9-99.2 0-132.6 7.8-19.6 22.9-34.7 42.5-42.5 29.4-11.7 99.2-9 132.6 0 19.6 7.8 34.7 22.9 42.5 42.5 11.7 29.4 9 99.2 0 132.6z" fill="#fff"/>
+            </svg>
+          </a>
+          <a href="https://blog.naver.com/shworld777" target="_blank" rel="noopener" aria-label="네이버 블로그" class="sns-icon sns-icon--blog">
+            <i class="ri-naver-line"></i>
+          </a>
+        </div>
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-2xl md:text-3xl font-bold mb-4">피크닉 테마파크 </h1><h1 class="text-4xl md:text-6xl font-bold mb-4">"신흥레저타운"</h1>
+            <div class="bg-gray-200 bg-opacity-75 p-4 rounded-lg inline-block mb-8">
+                <p class="text-lg md:text-xl text-red-500 font-bold">예매하시면 현장 판매가보다 훨씬 가성비 있게 구입하실 수 있습니다.</p>
+            </div>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#pricing" class="bg-primary hover:bg-primary/90 text-white py-3 px-8 rounded-button font-semibold text-lg whitespace-nowrap">이용권 구매</a>
+                <a href="#cabana" class="bg-white hover:bg-gray-100 text-primary py-3 px-8 rounded-button font-semibold text-lg whitespace-nowrap">카바나(평상) 예약하기</a>
+            </div>
+        </div>
+    </section>
+  <!-- 썸머나잇 섹션 -->
+  <section id="summer-night" style="padding: 60px 20px; background: linear-gradient(to top, #fdfbfb, #ebedee);">
+    <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+        <h2 style="font-size: 2rem; margin-bottom: 20px;">☀️ 신흥레저 썸머나잇 야간개장</h2>
+        <p style="font-size: 1.1rem; margin-bottom: 30px;">무더운 여름, 밤에도 시원하게 즐기자!<br>야간 워터월드 개장으로 더 길어진 즐거움</p>
+        
+        <div style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: left;">
+            <ul style="list-style: disc; padding-left: 20px; line-height: 1.8;">
+                <li><strong>운영 기간:</strong> 7월 26일(금) ~ 8월 24일(토)</li>
+                <li><strong>운영 시간:</strong> 18:00 ~ 22:00(주간이용은 오후 5시 마감)</li>
+                <li><strong>야간 입장료:</strong> 1만원 / 1인당 (대인,소인 구분없이 정액)</li>
+                <li><strong>카바나 요금:</strong> 3만원 (4인 기준, 평상 / 선착순 자리 배정)</li>
+                <li><strong>주간 이용객:</strong> 야간 연장 시 현장 추가 결제 가능</li>
+            </ul>
+            <p style="color: #e53e3e; font-weight: bold; margin-top: 18px;">* 썸머나잇은 예매없이 현장에서 티켓팅 합니다.</p>
+        </div>
+    </div>
+</section>
+    <section id="pricing" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">시즌별 요금안내</h2>
+            
+            
+<div class="mb-6">
+    <h3 class="py-3 px-6 font-medium text-primary border-b-2 border-primary">성수기</h3>
+    <div class="bg-white rounded-lg shadow-lg p-6 md:p-8 max-w-4xl mx-auto">
+        <div class="mb-4">
+                  <p class="text-gray-600 mb-2">기간: 7월 19일 ~ 8월 24일</p>
+              </div>
+              
+              <div class="overflow-x-auto">
+                  <table class="min-w-full w-auto border-collapse text-sm md:text-base">
+                      <thead>
+                        <tr class="bg-gray-50">
+                            <th class="py-3 px-4 text-center font-semibold text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/50">구분</th>
+                            <th class="py-3 px-4 text-center font-semibold text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/50">범위</th>
+                            <th class="py-3 px-4 text-center font-semibold text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/50">현장 판매가</th>
+                            <th class="py-3 px-4 text-center font-semibold text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/50">예매 시(토휴일)</th>
+                            <th class="py-3 px-4 text-center font-semibold text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/50">예매 시(주중/평일)</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="border-t">
+                            <td class="py-3 px-2 text-center font-medium focus:outline-none focus:ring-2 focus:ring-primary/50">일반</td>
+                            <td class="py-3 px-2 text-center text-gray-600 focus:outline-none focus:ring-2 focus:ring-primary/50">14세 중등생 이상</td>
+                            <td class="py-3 px-2 text-center focus:outline-none focus:ring-2 focus:ring-primary/50">24,000원</td>
+                            <td class="py-3 px-2 text-center text-primary font-medium focus:outline-none focus:ring-2 focus:ring-primary/50">19,200원</td>
+                            <td class="py-3 px-2 text-center text-primary font-medium focus:outline-none focus:ring-2 focus:ring-primary/50">16,000원</td>
+                        </tr>
+                        <tr class="border-t">
+                            <td class="py-3 px-2 text-center font-medium focus:outline-none focus:ring-2 focus:ring-primary/50">어린이</td>
+                            <td class="py-3 px-2 text-center text-gray-600 focus:outline-none focus:ring-2 focus:ring-primary/50">4세~초등생 이하</td>
+                            <td class="py-3 px-2 text-center focus:outline-none focus:ring-2 focus:ring-primary/50">20,000원</td>
+                            <td class="py-3 px-2 text-center text-primary font-medium focus:outline-none focus:ring-2 focus:ring-primary/50">16,000원</td>
+                            <td class="py-3 px-2 text-center text-primary font-medium focus:outline-none focus:ring-2 focus:ring-primary/50">13,000원</td>
+                        </tr>
+                        <tr class="border-t">
+                            <td class="py-3 px-2 text-center font-medium focus:outline-none focus:ring-2 focus:ring-primary/50">유아</td>
+                            <td class="py-3 px-2 text-center text-gray-600 focus:outline-none focus:ring-2 focus:ring-primary/50">36개월 이하</td>
+                            <td class="py-3 px-2 text-center focus:outline-none focus:ring-2 focus:ring-primary/50">무료 입장</td>
+                            <td class="py-3 px-2 text-center text-primary font-medium focus:outline-none focus:ring-2 focus:ring-primary/50">무료 입장</td>
+                            <td class="py-3 px-2 text-center text-primary font-medium focus:outline-none focus:ring-2 focus:ring-primary/50">무료 입장</td>
+                        </tr>
+                    </tbody>
+                  </table>
+              </div>
+  </div>
+  
+  <!-- 비수기 -->
+  <div class="mb-6">
+    <h3 class="py-3 px-6 font-medium text-primary border-b-2 border-primary">비수기</h3>
+    <div class="bg-white rounded-lg shadow-lg p-6 md:p-8 max-w-4xl mx-auto">
+    <div class="mb-4">
+        <p class="text-gray-600 mb-2">기간: 성수기 외 개장 기간</p>
+    </div>
+    
+    <div class="overflow-x-auto">
+        <table class="min-w-full w-auto border-collapse text-sm md:text-base">
+            <thead>
+                <tr class="bg-gray-50">
+                    <th class="py-3 px-4 text-center font-semibold text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/50">구분</th>
+                    <th class="py-3 px-4 text-center font-semibold text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/50">범위</th>
+                    <th class="py-3 px-4 text-center font-semibold text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/50">현장 판매가</th>
+                    <th class="py-3 px-4 text-center font-semibold text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/50">예매 시(토휴일)</th>
+                    <th class="py-3 px-4 text-center font-semibold text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/50">예매 시(주중/평일)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="border-t">
+                    <td class="py-3 px-2 text-center font-medium focus:outline-none focus:ring-2 focus:ring-primary/50">일반</td>
+                    <td class="py-3 px-2 text-center text-gray-600 focus:outline-none focus:ring-2 focus:ring-primary/50">14세 중등생 이상</td>
+                    <td class="py-3 px-2 text-center focus:outline-none focus:ring-2 focus:ring-primary/50">22,000원</td>
+                    <td class="py-3 px-2 text-center text-primary font-medium focus:outline-none focus:ring-2 focus:ring-primary/50">17,000원</td>
+                    <td class="py-3 px-2 text-center text-primary font-medium focus:outline-none focus:ring-2 focus:ring-primary/50">15,000원</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="py-3 px-2 text-center font-medium focus:outline-none focus:ring-2 focus:ring-primary/50">어린이</td>
+                    <td class="py-3 px-2 text-center text-gray-600 focus:outline-none focus:ring-2 focus:ring-primary/50">4세~초등생 이하</td>
+                    <td class="py-3 px-2 text-center focus:outline-none focus:ring-2 focus:ring-primary/50">17,000원</td>
+                    <td class="py-3 px-2 text-center text-primary font-medium focus:outline-none focus:ring-2 focus:ring-primary/50">13,000원</td>
+                    <td class="py-3 px-2 text-center text-primary font-medium focus:outline-none focus:ring-2 focus:ring-primary/50">11,000원</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="py-3 px-2 text-center font-medium focus:outline-none focus:ring-2 focus:ring-primary/50">유아</td>
+                    <td class="py-3 px-2 text-center text-gray-600 focus:outline-none focus:ring-2 focus:ring-primary/50">36개월 이하</td>
+                    <td class="py-3 px-2 text-center focus:outline-none focus:ring-2 focus:ring-primary/50">무료 입장</td>
+                    <td class="py-3 px-2 text-center text-primary font-medium focus:outline-none focus:ring-2 focus:ring-primary/50">무료 입장</td>
+                    <td class="py-3 px-2 text-center text-primary font-medium focus:outline-none focus:ring-2 focus:ring-primary/50">무료 입장</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
+               
+                    
+                    <div class="mt-6 bg-primary/5 p-4 rounded-lg flex items-start">
+                        <div class="w-6 h-6 flex items-center justify-center text-primary mr-2 mt-0.5">
+                            <i class="ri-information-line"></i>
+                        </div>
+                        <div class="flex flex-col">
+                            <p class="text-gray-700">온라인/모바일 예매 시 약 20%의 할인을 받으실 수 있습니다.</p>
+                            <p class="text-gray-700">수영장 내 카바나(평상)은 별도로 구입하셔야 합니다.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="offpeak-content" class="tab-content">
+                    
+                    
+                    <div class="mt-6 bg-primary/5 p-4 rounded-lg flex items-start">
+                        <div class="w-6 h-6 flex items-center justify-center text-primary mr-2 mt-0.5">
+                            <i class="ri-information-line"></i>
+                        </div>
+                        <div class="flex flex-col">
+                            <p class="text-gray-700">온라인/모바일 예매 시 약 20%의 할인을 받으실 수 있습니다.</p>
+                            <p class="text-gray-700">수영장 내 카바나(평상)은 별도로 구입하셔야 합니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center flex flex-col md:flex-row gap-4 justify-center">
+                <a href="https://kids.maketicket.co.kr/ticket/GD2500310" target="_blank" class="bg-primary hover:bg-primary/90 text-white py-3 px-8 rounded-button font-semibold text-lg whitespace-nowrap">성수기 이용권 구매</a>
+                <a href="https://kids.maketicket.co.kr/ticket/GD2500295" target="_blank" class="bg-blue-500 hover:bg-blue-600 text-white py-3 px-8 rounded-button font-semibold text-lg whitespace-nowrap">비수기 이용권 구매</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="cabana" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">카바나 안내</h2>
+            
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden max-w-5xl mx-auto mb-12">
+                <div class="aspect-w-16 aspect-h-9 w-full">
+                    <img src="https://richard-kim-ai.github.io/shinheung/cabana2.jpg" alt="카바나 배치도" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-4">카바나 배치도</h3>
+                    <p class="text-gray-600">수영장 주변에 위치한 다양한 타입의 카바나를 이용하실 수 있습니다. 원하시는 위치와 타입에 따라 선택하세요.</p>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-lg p-6 md:p-8 max-w-4xl mx-auto">
+                <h3 class="text-xl font-bold mb-6">가격표</h3>
+                
+                <div class="overflow-x-auto">
+                    <table class="min-w-full w-auto border-collapse text-sm md:text-base">
+                        <thead>
+                            <tr class="bg-gray-50">
+                                <th class="py-3 px-4 text-center font-semibold text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/50">구분</th>
+                                <th class="py-3 px-4 text-center font-semibold text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/50">내용</th>
+                                <th class="py-3 px-4 text-center font-semibold text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/50">성수기</th>
+                                <th class="py-3 px-4 text-center font-semibold text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/50">비수기</th>
+                             </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-t">
+                                <td class="py-3 px-2 text-center font-medium">신흥</td>
+                                <td class="py-3 px-2 text-center text-gray-600">수영장 주변(Pool Side) 독립형 평상</td>
+                                <td class="py-3 px-2 text-center">
+                                    <div>토휴일:70,000원</div>
+                                    <div>평  일:50,000원</div>
+                                </td>
+                                <td class="py-3 px-2 text-center">
+                                    <div>토휴일:50,000원</div>
+                                    <div>평  일:40,000원</div>
+                                </td>
+                     
+                            <tr class="border-t">
+                                <td class="py-3 px-2 text-center font-medium focus:outline-none focus:ring-2 focus:ring-primary/50">레저</td>
+                                <td class="py-3 px-2 text-center text-gray-600 focus:outline-none focus:ring-2 focus:ring-primary/50">식당 앞 파고라 / 어린이 수영장(Pool Side) 더블평상</td>
+                                <td class="py-3 px-2 text-center">
+                                    <div>토휴일:70,000원</div>
+                                    <div>평  일:50,000원</div>
+                                </td>
+                                <td class="py-3 px-2 text-center">
+                                    <div>토휴일:50,000원</div>
+                                    <div>평  일:40,000원</div>
+                                </td>
+                             
+                            </tr>
+                            <tr class="border-t">
+                                <td class="py-3 px-2 text-center font-medium focus:outline-none focus:ring-2 focus:ring-primary/50">산토리니</td>
+                                <td class="py-3 px-2 text-center text-gray-600 focus:outline-none focus:ring-2 focus:ring-primary/50">어린이 수영장 주변에 위치한 넓고 쾌적하게 이용가능한 평상</td>
+                                <td class="py-3 px-2 text-center">
+                                   <div>상시: 100,000원</div>
+                                </td>
+                                <td class="py-3 px-2 text-center">
+                                    <div>상시: 100,000원</div>
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="mt-6 bg-primary/5 p-4 rounded-lg flex items-start">
+                    <div class="w-6 h-6 flex items-center justify-center text-primary mr-2 mt-0.5">
+                        <i class="ri-information-line"></i>
+                    </div>
+                    <div class="flex flex-col">
+                    <p class="text-gray-700">일반 카바나(‘신흥’/’레저’ 지역)는 4인 이용으로 한정됩니다. 추가 1인까지 가능하며 이 경우 5천원의 추가 요금이 적용됩니다.</p>
+                    <p class="text-gray-700">‘산토리니’ 카바나는 6인까지 사용 가능합니다. 추가 1인 시 5천원의 추가 요금이 적용됩니다.</p>
+                    </div>
+                </div>
+                <!-- New Refund Policy Section for Cabana -->
+                <div class="mt-6 bg-primary/5 p-4 rounded-lg flex items-start">
+                    <div class="w-6 h-6 flex items-center justify-center text-primary mr-2 mt-0.5">
+                        <i class="ri-information-line"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <p class="text-gray-700 mb-2">카바나(평상)의 환불규정은 아래와 같습니다. 확인바랍니다.</p>
+                        <ul class="list-disc list-inside text-gray-700">
+                            <li>3일전 100%</li>
+                            <li>2일전 50%</li>
+                            <li>1일전~당일 : 환불 불가</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="https://kids.maketicket.co.kr/ticket/GD2400059" target="_blank" class="bg-yellow-400 hover:bg-yellow-500 text-black py-3 px-8 rounded-button font-semibold text-lg whitespace-nowrap inline-flex items-center justify-center">
+                    <i class="ri-home-8-line ri-lg mr-2"></i>카바나 예약하기
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="guide" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">이용안내</h2>
+            <p class="text-xl text-gray-600 mb-8">신흥레저타운에서 자연과 함께 행복한 추억을 만드세요!</p>
+            
+            <div class="container mx-auto px-4 text-left mb-8">
+                <h2 class="text-2xl font-bold mb-4">운영규정</h2>
+                <ul style="background:#f8fafc; border:1px solid #e5e7eb; border-radius:8px; padding:20px; font-size:16px; line-height:1.8;">
+                    <li class="mb-2">* 예매는 물론 당일 구매 및 당일 사용 가능합니다.</li>
+                    <li class="mb-2">* 구매하신 티켓은 각 시즌 기간내에서만 환불 가능합니다. (기간 경과한 비수기 사용권의 성수기 사용 불가합니다.)</li>
+                    <li class="mb-2">* 현장 도착 순으로 입장 가능합니다.</li>
+                    <li class="mb-2">* 카바나(평상) 은 유료 판매입니다. 사전 예약 하시지 않을 경우 현장 판매가 마감될 수 있습니다.</li>
+                    <li class="mb-2">* 카바나(평상) 이용은 1면에 4인까지 이용가능합니다. 단, 어린이 고객의 1명 추가 시 1인당 5천원의 사용료가 추가됩니다. (6인인 경우 산토리니 구역을 예매 하시거나 일반 카바나 2면을 예약하시기 바랍니다.)</li>
+                    <li class="mb-2">* 매점 및 식당 운영합니다.</li>
+                    <li class="mb-2">* 주차는 임시주차장을 무료 제공합니다. 주차 질서를 잘 지키셔서 이용객간 불미스런 일이 발생하지 않도록 주의 바랍니다.</li>
+                    <li class="mb-2">* 카트 서비스는 제공하지 않습니다.   
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- 수영장 이용시 주의사항 섹션 -->
+    <div class="container mx-auto px-4 text-left mb-8">
+      <h2 class="text-2xl font-bold mb-4">수영장 이용시 주의사항</h2>
+      <!-- 반응형 이미지 롤링 슬라이더 (PC: 3개, 모바일: 1개) -->
+      <div class="w-full flex justify-center mb-6">
+        <div class="relative w-full max-w-[944px] h-[300px] overflow-hidden rounded-lg" id="poolNoticeSlider">
+          <div class="flex transition-transform duration-500 gap-0 md:gap-4" style="width:2100px;" id="poolNoticeTrack">
+            <img src="http://richard-kim-ai.github.io/shinheung/s1-3.png" alt="수영장 주의1" class="w-[300px] h-[300px] object-cover rounded-lg flex-shrink-0">
+            <img src="http://richard-kim-ai.github.io/shinheung/s1-4.png" alt="수영장 주의2" class="w-[300px] h-[300px] object-cover rounded-lg flex-shrink-0">
+            <img src="http://richard-kim-ai.github.io/shinheung/s1-5.png" alt="수영장 주의3" class="w-[300px] h-[300px] object-cover rounded-lg flex-shrink-0">
+            <img src="http://richard-kim-ai.github.io/shinheung/s1-6.jpeg" alt="수영장 주의4" class="w-[300px] h-[300px] object-cover rounded-lg flex-shrink-0">
+            <img src="http://richard-kim-ai.github.io/shinheung/s1-7.jpeg" alt="수영장 주의5" class="w-[300px] h-[300px] object-cover rounded-lg flex-shrink-0">
+            <img src="http://richard-kim-ai.github.io/shinheung/s1-8.jpeg" alt="수영장 주의6" class="w-[300px] h-[300px] object-cover rounded-lg flex-shrink-0">
+            <img src="http://richard-kim-ai.github.io/shinheung/s1-9.jpeg" alt="수영장 주의7" class="w-[300px] h-[300px] object-cover rounded-lg flex-shrink-0">
+          </div>
+          <button id="poolPrev" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white bg-opacity-70 rounded-full w-8 h-8 flex items-center justify-center shadow"><i class="ri-arrow-left-s-line"></i></button>
+          <button id="poolNext" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white bg-opacity-70 rounded-full w-8 h-8 flex items-center justify-center shadow"><i class="ri-arrow-right-s-line"></i></button>
+        </div>
+      </div>
+      <ul style="background:#f8fafc; border:1px solid #e5e7eb; border-radius:8px; padding:20px; font-size:16px; line-height:1.8; color:#e53e3e; font-weight:bold;">
+        <li class="mb-2">※ 정부의 강력한 권고 및 지도에 따라 아래와 같이 반입 금지됩니다.</li>
+        <li class="mb-2">■ 유리 용기 주류 및 음료 반입 금지 시행</li>
+        <li class="mb-2">- 손님 및 어린이 안전 사고 사례들이 발생하여 유리병(주류) 사용 및 반입을 관계당국에서 철저히 관리 하오니 우리 어린이들과 손님들의 안전을 위하여 반드시 지켜 주시기 바랍니다.</li>
+        <li class="mb-2">- 유리용기(주류) 현장 취식 발견 시 퇴장 조치될 수 있으며 이 경우 각 이용료 반납은 되지 않습니다. 이점 유의 하시기 바랍니다.</li>
+        <li class="mb-2">- 피트 및 플라스틱 용기 반입 가능</li>
+        <li class="mb-2">- 매점에서 플라스틱 주류 및 캔류 판매합니다.</li>
+        <li class="mb-2">※  쓰레기 자진 회수 실시 : 일반 쓰레기 비닐 제공(종량제 봉투 아닙니다.)</li>
+        <li class="mb-2">※ 음주자 수영장(POOL) 입수 금지 : 음주 후 수영장 입수하여 발생한 사고에 대해서는 당사가 책임지지 않습니다.</li>
+        <li class="mb-2">※ 개인 화기(부르스타)의 사용은 가능하나 사용 중 과실에 의한 사고는 당사가 책임지지 않습니다. 기타 버너등의 화기는 사용할 수 없습니다. 또한 화기 사용 중 사고로 주변분들에게 피해가 발생 시 사용자 본인이 보상 및 배상등의 책임이 있습니다.</li>
+        <li class="mb-2">※ 지참하신 취식물 섭취로 인한 식중독, 급체등의 사고에 대해서는 당사가 책임지지 않습니다. 김밥, 쫄면, 냉면등 여름철 식중독에 민감한 음식물의 취식은 자제하여 주시기 바랍니다.</li>
+        <li class="mb-2">※ 일부 지정 흡연구역을 제외하고는 워터월드 전 지역이 금연 구역입니다.</li>   
+        <li class="mb-2"> 뛰어 다니지 마십시오. 특히 어린이를 동반한 고객께서는 뛰어다니지 않도록 주의 하여 주십시오. 뛰어 다니다가 본인 부주의로 발생한 사고에는 당사가 책임지지 않습니다.</li> 
+        <li class="mb-2"> 안내 요원의 지시에 따라 주십시오. 당사의 라이프가드 및 안내요원의 안내 및 지시에 불응하여 발생한 사고에 대해서는 당사가 책임지지 않습니다.</li> 
+        <li class="mb-2">※ 전자레인지 및 뜨거운 물을 제공하지 못합니다.<br> : 컵라면이나 햇반등 각종 취식물의 전자레인지 과다 사용으로 화재발생 위험이 있어 제공을 하지 못하오니 가공식품은 되도록 레저타운 매점에서 구입하셔서 이용 바랍니다.</li>
+         <li class="mb-2">※ 공기밥 별도 판매 : 충분한 양의 밥을 저렴하게 제공하고 있습니다.</li>
+      </ul>
+    </div>
+    <!-- 매점 식당 메뉴 안내 섹션 -->
+    <section id="store-menu" class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">매점 식당 메뉴 안내</h2>
+        <div class="mb-10">
+          <h3 class="section-title text-xl font-semibold border-b-2 border-primary inline-block mb-6">주요 요리</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="menu-item bg-white rounded-lg shadow p-4 flex flex-col items-center">
+              <img src="https://richard-kim-ai.github.io/shinheung/b1.jpg" alt="한방백숙" class="w-full h-48 object-cover rounded mb-4 cursor-pointer food-popup-img" />
+              <div class="info text-center">
+                <h3 class="font-bold text-lg mb-2">한방백숙</h3>
+                <p class="text-gray-700">₩80,000 (3인 기준)</p>
+              </div>
+            </div>
+            <div class="menu-item bg-white rounded-lg shadow p-4 flex flex-col items-center">
+              <img src="https://richard-kim-ai.github.io/shinheung/c1.jpg" alt="닭 볶음탕" class="w-full h-48 object-cover rounded mb-4 cursor-pointer food-popup-img" />
+              <div class="info text-center">
+                <h3 class="font-bold text-lg mb-2">닭 볶음탕</h3>
+                <p class="text-gray-700">₩70,000 (3인 기준)</p>
+              </div>
+            </div>
+            <div class="menu-item bg-white rounded-lg shadow p-4 flex flex-col items-center">
+              <img src="https://richard-kim-ai.github.io/shinheung/d1.jpg" alt="도토리묵" class="w-full h-48 object-cover rounded mb-4 cursor-pointer food-popup-img" />
+              <div class="info text-center">
+                <h3 class="font-bold text-lg mb-2">도토리묵</h3>
+                <p class="text-gray-700">₩15,000 (1접시)</p>
+              </div>
+            </div>
+            <div class="menu-item bg-white rounded-lg shadow p-4 flex flex-col items-center">
+              <img src="https://richard-kim-ai.github.io/shinheung/p1.png" alt="파전" class="w-full h-48 object-cover rounded mb-4 cursor-pointer food-popup-img" />
+              <div class="info text-center">
+                <h3 class="font-bold text-lg mb-2">파전</h3>
+                <p class="text-gray-700">₩15,000 (1접시)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rice-section mt-16">
+          <h3 class="section-title text-xl font-semibold border-b-2 border-primary inline-block mb-6">공기밥 안내</h3>
+          <!-- 1인분/2인분 비교 이미지 공간 -->
+          <div class="flex flex-col md:flex-row items-center justify-center gap-6 mb-6">
+            <img src="https://richard-kim-ai.github.io/shinheung/r1r2.png" alt="공기밥 1인분과 2인분 비교" class="w-full md:w-1/2 max-w-md rounded-lg shadow cursor-pointer food-popup-img" />
+          </div>
+          <p class="mb-6">공기밥: 넉넉히 드려요 ^^</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center">
+            <div class="rice-item bg-white rounded-lg shadow p-4 flex flex-col items-center">
+              <img src="https://richard-kim-ai.github.io/shinheung/r1.png" alt="공기밥 1인분" class="w-full h-48 object-cover rounded mb-2 cursor-pointer food-popup-img" />
+              <div class="info text-center">
+                <p class="font-bold">공기밥 1인분</p>
+                <p class="text-gray-700">₩2,000</p>
+              </div>
+            </div>
+            <div class="rice-item bg-white rounded-lg shadow p-4 flex flex-col items-center">
+              <img src="https://richard-kim-ai.github.io/shinheung/r2.png" alt="공기밥 2인분" class="w-full h-48 object-cover rounded mb-2 cursor-pointer food-popup-img" />
+              <div class="info text-center">
+                <p class="font-bold">공기밥 2인분</p>
+                <p class="text-gray-700">₩3,000</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+          <h3 class="section-title text-xl font-semibold border-b-2 border-primary inline-block mb-6">메뉴 가격표</h3>
+          <!-- PC용: 한줄 전체 테이블 -->
+          <div class="overflow-x-auto mb-8 hidden md:block">
+            <table class="min-w-full text-center border border-gray-300 bg-white">
+              <thead>
+                <tr>
+                  <th class="px-4 py-2 bg-blue-50 font-bold border">메뉴</th>
+                  <th class="px-4 py-2 bg-blue-50 font-bold border">왕돈까스</th>
+                  <th class="px-4 py-2 bg-blue-50 font-bold border">유부우동</th>
+                  <th class="px-4 py-2 bg-blue-50 font-bold border">어묵우동</th>
+                  <th class="px-4 py-2 bg-blue-50 font-bold border">순대</th>
+                  <th class="px-4 py-2 bg-blue-50 font-bold border">떡볶이</th>
+                  <th class="px-4 py-2 bg-blue-50 font-bold border">어묵</th>
+                  <th class="px-4 py-2 bg-blue-50 font-bold border">회오리감자</th>
+                  <th class="px-4 py-2 bg-blue-50 font-bold border">쿨팝</th>
+                  <th class="px-4 py-2 bg-blue-50 font-bold border">소떡</th>
+                  <th class="px-4 py-2 bg-blue-50 font-bold border">닭강정</th>
+                  <th class="px-4 py-2 bg-blue-50 font-bold border">한강라면</th>
+                  <th class="px-4 py-2 bg-blue-50 font-bold border">소주(640ml)</th>
+                  <th class="px-4 py-2 bg-blue-50 font-bold border">캔맥주</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="px-4 py-2 border">가격(원)</td>
+                  <td class="px-4 py-2 border">9,000</td>
+                  <td class="px-4 py-2 border">6,000</td>
+                  <td class="px-4 py-2 border">6,000</td>
+                  <td class="px-4 py-2 border">5,000</td>
+                  <td class="px-4 py-2 border">5,000</td>
+                  <td class="px-4 py-2 border">3,000</td>
+                  <td class="px-4 py-2 border">5,000</td>
+                  <td class="px-4 py-2 border">5,000</td>
+                  <td class="px-4 py-2 border">4,000</td>
+                  <td class="px-4 py-2 border">13,000</td>
+                  <td class="px-4 py-2 border">4,500</td>
+                  <td class="px-4 py-2 border">5,000</td>
+                  <td class="px-4 py-2 border">4,000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- 모바일용: 2줄 분할 테이블 -->
+          <div class="grid grid-cols-1 gap-6 mb-8 md:hidden">
+            <!-- 1번째 줄 -->
+            <div class="overflow-x-auto">
+              <table class="min-w-full text-center border border-gray-300 bg-white">
+                <thead>
+                  <tr>
+                    <th class="px-4 py-2 bg-blue-50 font-bold border">메뉴</th>
+                    <th class="px-4 py-2 bg-blue-50 font-bold border">왕돈까스</th>
+                    <th class="px-4 py-2 bg-blue-50 font-bold border">유부우동</th>
+                    <th class="px-4 py-2 bg-blue-50 font-bold border">어묵우동</th>
+                    <th class="px-4 py-2 bg-blue-50 font-bold border">순대</th>
+                    <th class="px-4 py-2 bg-blue-50 font-bold border">떡볶이</th>
+                    <th class="px-4 py-2 bg-blue-50 font-bold border">어묵</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="px-4 py-2 border">가격(원)</td>
+                    <td class="px-4 py-2 border">9,000</td>
+                    <td class="px-4 py-2 border">6,000</td>
+                    <td class="px-4 py-2 border">6,000</td>
+                    <td class="px-4 py-2 border">5,000</td>
+                    <td class="px-4 py-2 border">5,000</td>
+                    <td class="px-4 py-2 border">3,000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- 2번째 줄 -->
+            <div class="overflow-x-auto">
+              <table class="min-w-full text-center border border-gray-300 bg-white">
+                <thead>
+                  <tr>
+                    <th class="px-4 py-2 bg-blue-50 font-bold border">메뉴</th>
+                    <th class="px-4 py-2 bg-blue-50 font-bold border">회오리감자</th>
+                    <th class="px-4 py-2 bg-blue-50 font-bold border">쿨팝</th>
+                    <th class="px-4 py-2 bg-blue-50 font-bold border">소떡</th>
+                    <th class="px-4 py-2 bg-blue-50 font-bold border">닭강정</th>
+                    <th class="px-4 py-2 bg-blue-50 font-bold border">한강라면</th>
+                    <th class="px-4 py-2 bg-blue-50 font-bold border">소주(640ml)</th>
+                    <th class="px-4 py-2 bg-blue-50 font-bold border">캔맥주</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="px-4 py-2 border">가격(원)</td>
+                    <td class="px-4 py-2 border">5,000</td>
+                    <td class="px-4 py-2 border">5,000</td>
+                    <td class="px-4 py-2 border">4,000</td>
+                    <td class="px-4 py-2 border">13,000</td>
+                    <td class="px-4 py-2 border">4,500</td>
+                    <td class="px-4 py-2 border">5,000</td>
+                    <td class="px-4 py-2 border">4,000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <h3 class="section-title text-xl font-semibold border-b-2 border-primary inline-block mb-6">캠핑 도구 가격표</h3>
+          <div class="overflow-x-auto mb-8">
+            <table class="min-w-full text-center border border-gray-300 bg-white">
+              <thead>
+                <tr>
+                  <th class="px-4 py-2 bg-blue-50 font-bold border">도구</th>
+                  <th class="px-4 py-2 bg-blue-50 font-bold border">부탄가스</th>
+                  <th class="px-4 py-2 bg-blue-50 font-bold border">봉지얼음</th>
+                  <th class="px-4 py-2 bg-blue-50 font-bold border">땡땡이얼음물</th>
+                  <th class="px-4 py-2 bg-blue-50 font-bold border">돗자리(대)</th>
+                  <th class="px-4 py-2 bg-blue-50 font-bold border">돗자리(소)</th>
+                  <th class="px-4 py-2 bg-blue-50 font-bold border">밥상(렌탈)</th>
+                  <th class="px-4 py-2 bg-blue-50 font-bold border">부르스타(렌탈)</th>
+                  <th class="px-4 py-2 bg-blue-50 font-bold border">기타</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="px-4 py-2 border">가격(원)</td>
+                  <td class="px-4 py-2 border">2,000</td>
+                  <td class="px-4 py-2 border">3,000</td>
+                  <td class="px-4 py-2 border">1,500</td>
+                  <td class="px-4 py-2 border">20,000</td>
+                  <td class="px-4 py-2 border">10,000</td>
+                  <td class="px-4 py-2 border">5,000</td>
+                  <td class="px-4 py-2 border">5,000</td>
+                  <td class="px-4 py-2 border">컵라면, 음료 / 대여 용품</td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+      </div>
+    </section>
+
+     <!-- 문의하기 섹션 -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">문의하기</h2>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="http://pf.kakao.com/_IxgmAG/chat" target="_blank"
+                    class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-4 px-8 rounded-full text-xl shadow-lg flex items-center justify-center">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/kakaotalk.svg" alt="카카오톡" style="width:32px; height:32px; margin-right:12px;">
+                    카카오톡 채널로 문의하기
+                </a>
+                <a href="http://pf.kakao.com/_SxeYGb/chat" target="_blank"
+                    class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-8 rounded-full text-xl shadow-lg flex items-center justify-center">
+                    <i class="ri-customer-service-2-line ri-xl" style="margin-right:12px;"></i>
+                    취소/환불 CS 접수
+                </a>
+            </div>
+        </div>
+    </section>
+
+ <!-- 오시는길 섹션 - 네이버 지도 -->
+<section id="location" class="bg-white py-0 border-t border-gray-200">
+  <div class="w-full h-80 md:h-[480px] relative overflow-hidden">
+    <iframe src="https://naver.me/F6nIIlLk" width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy"></iframe>
+  </div>
+</section>
+    <footer class="bg-gray-800 text-white py-12">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-8">
+          <div class="mb-8 md:mb-0">
+            <h3 class="text-2xl font-['Pacifico'] mb-4">신흥레저타운</h3>
+            <p class="text-gray-400 mb-4">자연 속에서 즐기는 사계절 레저, 신흥레저타운에서 특별한 경험을 만나보세요.</p>
+            <div class="flex space-x-4 mb-4">
+              <a href="https://www.instagram.com/shtown_official" class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition-colors">
+                <i class="ri-instagram-line"></i>
+              </a>
+              <a href="https://blog.naver.com/shworld777" class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition-colors">
+                <i class="ri-naver-line"></i>
+              </a>
+              <a href="https://pf.kakao.com/_SxeYGb/chat" class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition-colors">
+                <i class="ri-kakao-talk-fill"></i>
+              </a>
+            </div>
+          </div>
+          <div class="mb-8 md:mb-0">
+            <h4 class="text-lg font-bold mb-4">회사정보</h4>
+            <ul class="space-y-2 text-gray-400 text-sm">
+              <li>(주)스튜디오뉴웨이브</li>
+              <li>대표이사 : 강성모</li>
+              <li>Address : 경기도 양주시 장흥면 유원지로 406-9</li>
+              <li>Business No : 351-88-00769</li>
+              <li>예약 입금 계좌 : KB국민은행 763601-04-182538 (예금주 : 스튜디오뉴웨이브)</li>
+              <li>Tel : 1551-1255 | FAX : 031-855-5032</li>
+              <li>Mail : shaa10@naver.com</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 text-sm">
+          <p>&copy; 2025 신흥레저타운. All rights reserved.</p>
+        </div>
+      </div>
+
+    </footer>
+
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-4 items-end">
+      <a href="#pricing" aria-label="입장권 예약하기" class="flex items-center justify-center bg-primary hover:bg-primary/90 text-white w-14 h-14 rounded-full shadow-lg focus:ring-2 focus:ring-primary/50 cursor-pointer" title="입장권 예약하기">
+        <i class="ri-ticket-line ri-lg"></i>
+      </a>
+      <a href="#cabana" aria-label="카바나 안내로 바로가기" class="flex items-center justify-center bg-yellow-400 hover:bg-yellow-500 text-black w-14 h-14 rounded-full shadow-lg focus:ring-2 focus:ring-yellow-300 cursor-pointer" title="카바나 안내">
+        <i class="ri-home-8-line ri-lg"></i>
+      </a>
+    </div>
+
+    <script id="mobileMenuScript">
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        });
+    </script>
+
+    <script id="tabsScript">
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const tabId = this.id.replace('-', '-content-');
+                    
+                    tabButtons.forEach(btn => {
+                        btn.classList.remove('text-primary', 'border-primary');
+                        btn.classList.add('text-gray-500');
+                    });
+                    
+                    tabContents.forEach(content => {
+                        content.classList.remove('active');
+                    });
+                    
+                    this.classList.add('text-primary', 'border-primary');
+                    this.classList.remove('text-gray-500');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+        });
+    </script>
+
+    <script id="reviewSliderScript">
+        document.addEventListener('DOMContentLoaded', function() {
+            const track = document.getElementById('reviewTrack');
+            const slides = document.querySelectorAll('.review-slide');
+            const prevButton = document.getElementById('prevReview');
+            const nextButton = document.getElementById('nextReview');
+            const indicators = document.querySelectorAll('[data-index]');
+            
+            let currentIndex = 0;
+            const slidesToShow = window.innerWidth >= 768 ? 3 : 1;
+            const slideCount = slides.length;
+            const maxIndex = Math.ceil(slideCount / slidesToShow) - 1;
+            
+            function updateSlidePosition() {
+                const slideWidth = 100 / slidesToShow;
+                const offset = -currentIndex * slideWidth * slidesToShow;
+                track.style.transform = `translateX(${offset}%)`;
+                
+                indicators.forEach((indicator, index) => {
+                    if (index === currentIndex) {
+                        indicator.classList.remove('bg-gray-300');
+                        indicator.classList.add('bg-primary');
+                    } else {
+                        indicator.classList.remove('bg-primary');
+                        indicator.classList.add('bg-gray-300');
+                    }
+                });
+            }
+            
+            prevButton.addEventListener('click', function() {
+                currentIndex = Math.max(0, currentIndex - 1);
+                updateSlidePosition();
+            });
+            
+            nextButton.addEventListener('click', function() {
+                currentIndex = Math.min(maxIndex, currentIndex + 1);
+                updateSlidePosition();
+            });
+            
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', function() {
+                    currentIndex = index;
+                    updateSlidePosition();
+                });
+            });
+            
+            window.addEventListener('resize', function() {
+                const newSlidesToShow = window.innerWidth >= 768 ? 3 : 1;
+                if (newSlidesToShow !== slidesToShow) {
+                    slidesToShow = newSlidesToShow;
+                    currentIndex = 0;
+                    updateSlidePosition();
+                }
+            });
+            
+            updateSlidePosition();
+        });
+    </script>
+
+    <script id="smoothScrollScript">
+        document.addEventListener('DOMContentLoaded', function() {
+            const scrollLinks = document.querySelectorAll('a[href^="#"]');
+            
+            scrollLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        e.preventDefault();
+                        const headerHeight = document.querySelector('header').offsetHeight;
+                        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+
+    <script id="formValidationScript">
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('form');
+            
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const phone = document.getElementById('phone').value;
+                    const message = document.getElementById('message').value;
+                    const privacy = document.getElementById('privacy').checked;
+                    
+                    if (!name || !email || !phone || !message) {
+                        alert('모든 필수 항목을 입력해주세요.');
+                        return;
+                    }
+                    
+                    if (!privacy) {
+                        alert('개인정보 수집 및 이용에 동의해주세요.');
+                        return;
+                    }
+                    
+                    alert('문의가 성공적으로 접수되었습니다. 빠른 시일 내에 답변 드리겠습니다.');
+                    form.reset();
+                });
+            }
+        });
+    </script>
+
+    <!-- 즉시 노출 팝업 스크립트 및 구조 추가 -->
+    <script id="instantPopupScript">
+    document.addEventListener('DOMContentLoaded', function() {
+      // 팝업이 24시간 동안 안보이기 체크되어 있으면 return
+      const popupId = 'instantPopup202407';
+      const lastClosedTime = localStorage.getItem(`popup_${popupId}_closed`);
+      if (lastClosedTime) {
+        const twentyFourHours = 24 * 60 * 60 * 1000;
+        if (Date.now() - parseInt(lastClosedTime) < twentyFourHours) {
+          return;
+        }
+      }
+      // 팝업 DOM 생성
+      const popupHtml = `
+        <div id="mainPopup" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-[100]" style="z-index:99999;">
+          <div class="bg-white rounded-lg shadow-xl max-w-sm w-full p-6 relative flex flex-col items-center">
+            <button id="closePopup" class="absolute top-3 right-3 text-gray-500 hover:text-gray-700 text-2xl font-bold">&times;</button>
+            <img src="https://github.com/richard-kim-ai/shinheung/blob/main/popup5.png?raw=true" alt="팝업 이미지" class="w-full h-auto rounded mb-4">
+            <div class="flex items-center mt-4">
+              <input type="checkbox" id="doNotShowAgain" class="form-checkbox h-4 w-4 text-primary rounded custom-checkbox">
+              <label for="doNotShowAgain" class="ml-2 text-sm text-gray-700">24시간 동안 다시 보지 않기</label>
+            </div>
+          </div>
+        </div>
+      `;
+      document.body.insertAdjacentHTML('beforeend', popupHtml);
+      document.body.style.overflow = 'hidden';
+      // 닫기 버튼 이벤트
+      document.getElementById('closePopup').onclick = function() {
+        if (document.getElementById('doNotShowAgain').checked) {
+          localStorage.setItem(`popup_${popupId}_closed`, Date.now());
+        }
+        document.getElementById('mainPopup').remove();
+        document.body.style.overflow = '';
+      };
+    });
+    </script>
+
+    <InstagramFeed userId="https://www.instagram.com/shtown_official/" accessToken="ACCESS_TOKEN" />
+
+    <script>
+      // 반응형 수영장 이용시 주의사항 이미지 슬라이더 (PC: 3개, 모바일: 1개)
+      document.addEventListener('DOMContentLoaded', function() {
+        const track = document.getElementById('poolNoticeTrack');
+        const prev = document.getElementById('poolPrev');
+        const next = document.getElementById('poolNext');
+        const total = 7;
+        let idx = 0;
+        function getSlidesToShow() {
+          return window.innerWidth < 768 ? 1 : 3;
+        }
+        function updateSlider() {
+          const slidesToShow = getSlidesToShow();
+          const slideWidth = 300;
+          const gap = slidesToShow === 1 ? 0 : 16; // 모바일은 gap 0, PC는 16px
+          const maxWidth = slidesToShow === 1 ? slideWidth : (slideWidth * slidesToShow + gap * (slidesToShow - 1));
+          track.parentElement.style.maxWidth = maxWidth + 'px';
+          // 모바일은 gap 없이, PC는 gap 포함해서 transform
+          if (slidesToShow === 1) {
+            track.style.transform = `translateX(-${idx * slideWidth}px)`;
+          } else {
+            track.style.transform = `translateX(-${idx * (slideWidth + gap)}px)`;
+          }
+        }
+        prev.onclick = function() {
+          const slidesToShow = getSlidesToShow();
+          idx = (idx - slidesToShow + total) % total;
+          updateSlider();
+        };
+        next.onclick = function() {
+          const slidesToShow = getSlidesToShow();
+          idx = (idx + slidesToShow) % total;
+          updateSlider();
+        };
+        // 자동 롤링
+        setInterval(() => {
+          const slidesToShow = getSlidesToShow();
+          idx = (idx + slidesToShow) % total;
+          updateSlider();
+        }, 3500);
+        // 반응형 대응
+        window.addEventListener('resize', updateSlider);
+        updateSlider();
+      });
+    </script>
+
+    <script id="foodImageModalScript">
+    document.addEventListener('DOMContentLoaded', function() {
+      // 기존 모달이 있으면 삭제
+      function removeFoodModal() {
+        const modal = document.getElementById('foodImageModal');
+        if (modal) {
+          modal.remove();
+          document.body.style.overflow = '';
+        }
+      }
+      // 이미지 클릭 시 모달 생성
+      document.querySelectorAll('.food-popup-img').forEach(function(img) {
+        img.addEventListener('click', function() {
+          removeFoodModal();
+          const modalHtml = `
+            <div id="foodImageModal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-[99999]" style="z-index:99999;">
+              <div class="relative bg-transparent flex flex-col items-center">
+                <button id="closeFoodModal" class="absolute top-0 right-0 mt-2 mr-2 text-white text-3xl font-bold z-10" style="background:rgba(0,0,0,0.4);border-radius:50%;width:40px;height:40px;display:flex;align-items:center;justify-content:center;">&times;</button>
+                <img src="${img.src}" alt="${img.alt}" class="max-w-[90vw] max-h-[80vh] rounded shadow-lg border-4 border-white" />
+                <div class="mt-2 text-white text-center text-lg bg-black bg-opacity-50 px-4 py-2 rounded">${img.alt}</div>
+              </div>
+            </div>
+          `;
+          document.body.insertAdjacentHTML('beforeend', modalHtml);
+          document.body.style.overflow = 'hidden';
+          document.getElementById('closeFoodModal').onclick = removeFoodModal;
+          // 바깥 클릭 시 닫기
+          document.getElementById('foodImageModal').addEventListener('click', function(e) {
+            if (e.target === this) removeFoodModal();
+          });
+        });
+      });
+    });
+    </script>
